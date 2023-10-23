@@ -48,4 +48,3 @@ class ItemController extends Controller
         // Lógica para excluir um item
     }
 }
-
