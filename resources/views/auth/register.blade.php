@@ -24,10 +24,20 @@
                 <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
             </div>
 
-            <div class="mt-4">
+
                 <x-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
                 <x-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
             </div>
+
+            <div class="mt-4">
+                <div class="mt-4">
+                    <label for="professor_aluno">{{ __('Aluno') }}</label>
+                    <input type="radio" name="professor" id="professor_aluno" value="false" checked>
+
+                    <label for="professor_professor">{{ __('Professor') }}</label>
+                    <input type="radio" name="professor" id="professor_professor" value="true">
+                </div>
+
 
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
                 <div class="mt-4">
