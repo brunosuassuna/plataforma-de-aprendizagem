@@ -16,6 +16,10 @@ use App\Http\Controllers\CursosController;
 
 Route::get('/', [CursosController::class, 'index'] );
 Route::get('/cursos/nossoscursos', [CursosController::class, 'nossoscursos'] );
+Route::get('/cursos/php', [CursosController::class, 'php'] );
+Route::get('/cursos/laravel', [CursosController::class, 'laravel'] );
+Route::get('/cursos/mysql', [CursosController::class, 'mysql'] );
+Route::get('/cursos/docker', [CursosController::class, 'docker'] );
 Route::get('/professor/areaprofessor', [CursosController::class, 'areaprofessor'] );
 Route::get('/aluno/areaaluno', [CursosController::class, 'areaaluno'] );
 Route::get('/contato/areacontato', [CursosController::class, 'areacontato'] );
@@ -35,3 +39,4 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+

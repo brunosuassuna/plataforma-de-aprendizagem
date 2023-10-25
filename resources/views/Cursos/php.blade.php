@@ -1,6 +1,17 @@
 @extends('layouts.main')
 
-@section('title','Brothers Learning')
+@section('title','PHP')
 
 @section('content')
-<h1>PHP:</h1>
+
+
+
+<img id="logo" src="/img/php-logo.svg" alt="Brothers Learning">
+<main>
+<p>
+
+O PHP é uma linguagem de programação multiplataforma, open source, gratuita e bastante completa. É uma das linguagens de programação mais utilizadas no desenvolvimento web, tendo uma comunidade vibrante e uma evolução rápida nos últimos anos.
+
+</p>
+</main>
+@endsection
