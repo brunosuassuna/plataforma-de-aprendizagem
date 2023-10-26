@@ -1,12 +1,15 @@
-
-
-*{
-    font-family: 'roboto';
-
-}
-
 #logo{
     width: 100px;
+}
+
+.msg{
+    background-color: #D4EDDA;
+    color: #155724;
+    border: 1px solid #C3E6CB;
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+    padding: 10px;
 }
 
 
@@ -17,7 +20,66 @@
     box-sizing: border-box;
 }
 
+/*INTERFACE DOS CURSOS*/
+/* Define uma grade com duas colunas e um espaçamento entre as células de 20px */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
 
+/* Estilo básico para cada cartão de curso */
+.course-card {
+    position: relative;
+    border-radius: 5px; /* Arredonda as bordas do cartão */
+    overflow: hidden; /* Garante que o conteúdo não vaze para fora do cartão */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra sutil */
+    transition: transform 0.2s; /* Adiciona uma transição suave ao efeito de escala */
+}
+
+/* Quando o mouse passa sobre o cartão, ele aumenta ligeiramente de tamanho */
+.course-card:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para as imagens dos cursos */
+.course-image {
+    width: 20%;
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Sobreposição que aparece quando o mouse passa sobre o cartão */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Fundo com transparência */
+    color: #fff; /* Cor do texto */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Inicialmente, a sobreposição é invisível */
+    transition: opacity 0.2s; /* Adiciona uma transição suave à opacidade */
+}
+
+/* Quando o mouse passa sobre o cartão, a sobreposição se torna visível */
+.course-card:hover .overlay {
+    opacity: 1;
+}
+
+/* Estilo para o título do curso */
+.course-title {
+    font-size: 1.0rem; /* Tamanho da fonte do título */
+    margin: 0; /* Remove as margens padrão para evitar espaçamento indesejado */
+}
+
+/* Estilo para a descrição do curso */
+.course-description {
+    font-size: 0.5rem; /* Tamanho da fonte da descrição */
+}
 
 /* ELEMENTOS DA INTERFACE */
 
@@ -36,7 +98,7 @@ body {
     align-items: center;
 }
 
-header, main, section, article {
+header, section, article {
     max-width: 700px;
 }
 
@@ -62,6 +124,9 @@ footer {
     margin-top: auto;
     padding: 5px;
 }
+footer a {
+    margin-right: 10px;
+}
 
 p {
     text-align: justify;
@@ -75,11 +140,9 @@ h2, h3, h4 {
 
 a {
     color: #15142b;
-    background-color: rgba(55, 41, 145, 0.1);
     padding: 0 3px;
     font-weight: 600;
     text-decoration: none;
-    border-bottom: .5px dotted #0a0a0a;
 }
 
 a:hover {

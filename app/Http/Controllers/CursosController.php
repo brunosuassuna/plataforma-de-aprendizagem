@@ -74,7 +74,7 @@ class CursosController extends Controller
         $aula->save();
 
 
-        return redirect('/cursos/nossoscursos');
+        return redirect('/cursos/nossoscursos')->with('msg','Aula Criada!');
     }
 
 
