@@ -25,4 +25,5 @@ class AlunoController extends Controller
     {
         // Processar a configuração da senha aqui
     }
+    
 }
