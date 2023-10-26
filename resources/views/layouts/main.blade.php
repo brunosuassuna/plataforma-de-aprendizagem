@@ -15,6 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtzJLQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="/js/scripts.js"></script>
+    <link rel="icon" href="/img/modelo5.jpeg" type="image/x-icon">
 </head>
 
 <body>
@@ -35,7 +36,7 @@
                         <a href="/aluno/areaaluno" class="nav-link">Área do Aluno</a>
                     </li>
                     @auth
-                        
+
 <li class="nav-item">
                                 <form action="/logout" method="POST">
                                     @csrf
@@ -82,3 +83,4 @@ this.closest('form').submit();">
 </body>
 
 </html>
+

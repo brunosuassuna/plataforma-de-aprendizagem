@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nomeaula');
             $table->text('conteudo');
+            $table->string('curso');
             $table->string('videoaula');
             $table->timestamps();
         });

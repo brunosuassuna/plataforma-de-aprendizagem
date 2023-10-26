@@ -16,6 +16,13 @@ use App\Http\Controllers\CursosController;
 
 Route::get('/', [CursosController::class, 'index'] );
 Route::get('/cursos/nossoscursos', [CursosController::class, 'nossoscursos'] );
+Route::get('/cursos/create', [CursosController::class, 'create'] );
+Route::post('/cursos', [CursosController::class, 'store'] );
+
+
+
+
+
 Route::get('/cursos/php', [CursosController::class, 'php'] );
 Route::get('/cursos/laravel', [CursosController::class, 'laravel'] );
 Route::get('/cursos/mysql', [CursosController::class, 'mysql'] );

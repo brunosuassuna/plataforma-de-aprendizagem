@@ -23,6 +23,8 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+
+
     protected $fillable = [
         'name',
         'email',
@@ -59,4 +61,7 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+    public function aula(){
+        return $this->hasMany('App\Models\Aula');
+    }
 }

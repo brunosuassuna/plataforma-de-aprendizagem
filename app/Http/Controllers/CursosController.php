@@ -15,8 +15,11 @@ class CursosController extends Controller
 
     public function nossoscursos()
     {
-        $aulas = Aula::all();
-        return view('cursos.nossoscursos',['aula' => $aulas]);
+        return view('cursos.nossoscursos');
+    }
+    public function create()
+    {
+        return view('cursos.create');
     }
 
     public function php()
@@ -50,4 +53,33 @@ class CursosController extends Controller
     {
         return view('contato.areacontato');
     }
+    public function store(Request $request)
+    {
+        $aula = new Aula;
+
+        $aula->nomeaula = $request->nomeaula;
+        $aula->conteudo = $request->conteudo;
+        $aula->curso = $request->curso;
+
+        // Verifique se um arquivo de vídeo foi enviado
+        if ($request->hasFile('videoaula')) {
+            $file = $request->file('videoaula');
+
+            // Determine um local para salvar o arquivo, por exemplo, na pasta de uploads
+            $path = $file->store('uploads');
+
+            $aula->videoaula = $path; // Salve o caminho do arquivo no banco de dados
+        }
+
+        $aula->save();
+
+
+        return redirect('/cursos/nossoscursos');
+    }
+
+
+
+
+
+
 }
