@@ -13,7 +13,7 @@
 
         <div class="form-group">
             <label for="title">Nome:</label>
-            <input type="type" class="form-control-file" id="nomeaula" name="nomeaula" placeholder="Nome do evento">
+            <input type="type" class="form-control-file" id="nomeaula" name="nomeaula" placeholder="Nome da aula">
         </div>
 
         <div class="form-group">

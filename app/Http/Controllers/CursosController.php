@@ -21,10 +21,11 @@ class CursosController extends Controller
     {
         return view('cursos.create');
     }
-
     public function php()
     {
-        return view('cursos.php');
+        $aulas = Aula:: all();
+
+        return view('cursos.php',['aulas'=>$aulas]);
     }
     public function laravel()
     {
@@ -74,7 +75,7 @@ class CursosController extends Controller
         $aula->save();
 
 
-        return redirect('/cursos/nossoscursos')->with('msg','Aula Criada!');
+        return redirect('/')->with('msg','Aula Criada!');
     }
 
 

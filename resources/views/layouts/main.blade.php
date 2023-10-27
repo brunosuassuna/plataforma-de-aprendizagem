@@ -34,9 +34,6 @@
                 <ul class="navbar-nav">
                     <!-- Links de navegação no cabeçalho -->
                     <li class="nav-item">
-                        <a href="/cursos/nossoscursos" class="nav-link">Cursos</a>
-                    </li>
-                    <li class="nav-item">
                         <a href="/professor/areaprofessor" class="nav-link">Área do Professor</a>
                     </li>
                     <li class="nav-item">
