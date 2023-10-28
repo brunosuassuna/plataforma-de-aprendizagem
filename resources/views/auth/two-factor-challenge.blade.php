@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
-            <x-authentication-card-logo />
+            <img style="width: 150px;" id="logo" src="/img/modelo5.jpeg" alt="Brothers Learning"> <!-- Logo do site -->
         </x-slot>
 
         <div x-data="{ recovery: false }">

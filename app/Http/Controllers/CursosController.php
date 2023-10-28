@@ -23,26 +23,32 @@ class CursosController extends Controller
     }
     public function php()
     {
-        $aulas = Aula:: all();
-
-        return view('cursos.php',['aulas'=>$aulas]);
+        $aulas = Aula::all();
+        return view('cursos.php', ['aulas' => $aulas]);
     }
     public function laravel()
     {
-        return view('cursos.laravel');
+        $aulas = Aula::all();
+        return view('cursos.laravel', ['aulas' => $aulas]);
     }
     public function mysql()
     {
-        return view('cursos.mysql');
+        $aulas = Aula::all();
+        return view('cursos.mysql', ['aulas' => $aulas]);
     }
     public function docker()
     {
-        return view('cursos.docker');
+        $aulas = Aula::all();
+        return view('cursos.docker', ['aulas' => $aulas]);
     }
 
     public function areaprofessor()
     {
         return view('professor.areaprofessor');
+    }
+    public function avaliacao()
+    {
+        return view('professor.avaliacao');
     }
 
     public function areaaluno()
@@ -74,13 +80,7 @@ class CursosController extends Controller
 
         $aula->save();
 
-
-        return redirect('/')->with('msg','Aula Criada!');
+        return redirect('/')->with('msg', 'Aula Criada!');
     }
-
-
-
-
-
 
 }

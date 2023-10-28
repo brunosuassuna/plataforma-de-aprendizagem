@@ -14,9 +14,8 @@ O PHP é uma linguagem de programação multiplataforma, open source, gratuita e
 
 <div>
     <h2>Aulas</h2>
-    $curso = $aulas->curso;
-    @if ($curso = "php")
-        @foreach ($aulas as $aula)
+    @foreach ($aulas as $aula)
+    @if ($aula->curso == "php")
 
             <div class="course-card">
                 <a href="#" class="course-link"></a>
@@ -26,8 +25,8 @@ O PHP é uma linguagem de programação multiplataforma, open source, gratuita e
                     <h5>{{ $aula->conteudo }}</h5>
                 </div>
             </div>
+            @endif
         @endforeach
-    @endif
 </div>
 
 @endsection

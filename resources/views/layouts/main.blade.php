@@ -82,9 +82,6 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="/contato/areacontato">Contato</a> <!-- Link para a página de contato -->
-                    </li>
                     <li>
                         Brothers Learning &copy; 2023 <!-- Informação de direitos autorais -->
                     </li>

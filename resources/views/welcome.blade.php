@@ -5,7 +5,7 @@
 @section('content')
     <div class="course-grid">
         <div class="course-card">
-            <a href="http://127.0.0.1:8000/cursos/php" class="course-link" title="PHP: Módulo 01 [20 HORAS]">
+            <a href="/cursos/php" class="course-link" title="PHP: Módulo 01 [20 HORAS]">
                 <img src="img/php-logo.svg" alt="Logotipo do Brothers Learning" class="course-image">
                 <div class="overlay">
                     <h2 class="course-title">PHP</h2>
@@ -15,7 +15,7 @@
         </div>
 
         <div class="course-card">
-            <a href="http://127.0.0.1:8000/cursos/laravel" class="course-link" title="LARAVEL: Módulo 01 [20 HORAS]">
+            <a href="/cursos/laravel" class="course-link" title="LARAVEL: Módulo 01 [20 HORAS]">
                 <img src="img/laravell.png" alt="Logotipo do Brothers Learning" class="course-image">
                 <div class="overlay">
                     <h2 class="course-title">Laravel</h2>
@@ -25,7 +25,7 @@
         </div>
 
         <div class="course-card">
-            <a href="http://127.0.0.1:8000/cursos/mysql" class="course-link" title="MYSQL: Módulo 01 [20 HORAS]">
+            <a href="/cursos/mysql" class="course-link" title="MYSQL: Módulo 01 [20 HORAS]">
                 <img src="img/mysql-logo.png" alt="Logotipo do Brothers Learning" class="course-image">
                 <div class="overlay">
                     <h2 class="course-title">MySQL</h2>
@@ -35,7 +35,7 @@
         </div>
 
         <div class="course-card">
-            <a href="http://127.0.0.1:8000/cursos/docker" class="course-link" title="DOCKER: Módulo 01 [20 HORAS]">
+            <a href="/cursos/docker" class="course-link" title="DOCKER: Módulo 01 [20 HORAS]">
                 <img src="img/doocker.png" alt="Logotipo do Brothers Learning" class="course-image">
                 <div class="overlay">
                     <h2 class="course-title">Docker</h2>

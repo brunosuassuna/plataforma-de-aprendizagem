@@ -1,34 +1,29 @@
-@extends('layouts.app')
+@extends('layouts.main')
+
+@section('title', 'Área do Professor')
 
 @section('content')
+    <h1> Bem Vindo Professor! </h1>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>Área do professor</h1>
-        </div>
-    </div>
+    <div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Curso</th>
-                        <th>Média</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($averages as $average)
-                    <tr>
-                        <td>{{ $average['course'] }}</td>
-                        <td>{{ $average['average'] }}</td>
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
+
+        <div class="course-card" id="prof-card">
+            <img src="/img/video-aula.png" alt="Cadastrar Aula" class="course-image" id="prof-img">
+            <a href="/cursos/create" class="course-link">Criar Aula
+                <div class="overlay">
+                </div>
+            </a>
         </div>
+        <div class="course-card" id="prof-card">
+            <img src="/img/prova.png" alt="Logotipo do Brothers Learning" class="course-image" id="prof-img">
+            <a href="/professor/avaliacao" class="course-link">Criar Avaliação
+                <div class="overlay">
+                    <p>Criar Avaliação</p>
+                </div>
+            </a>
+        </div>
+
     </div>
-</div>
 
 @endsection

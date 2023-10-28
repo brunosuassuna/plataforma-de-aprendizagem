@@ -11,5 +11,21 @@
 
     O Docker é uma plataforma open source que facilita a criação e administração de ambientes isolados. Ele possibilita o empacotamento de uma aplicação ou ambiente dentro de um container, se tornando portátil para qualquer outro host que contenha o Docker instalado.
 </p>
+<div>
+    <h2>Aulas</h2>
+    @foreach ($aulas as $aula)
+    @if ($aula->curso == "docker")
+
+            <div class="course-card">
+                <a href="#" class="course-link"></a>
+                <img src="#" alt="Logotipo do Brothers Learning" class="course-image">
+                <h5>{{ $aula->nomeaula }}</h5>
+                <div class="overlay">
+                    <h5>{{ $aula->conteudo }}</h5>
+                </div>
+            </div>
+            @endif
+        @endforeach
+</div>
 
 @endsection

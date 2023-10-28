@@ -10,7 +10,6 @@
     <form action="/cursos" method="POST" enctype="multipart/form-data">
         @csrf
 
-
         <div class="form-group">
             <label for="title">Nome:</label>
             <input type="type" class="form-control-file" id="nomeaula" name="nomeaula" placeholder="Nome da aula">
