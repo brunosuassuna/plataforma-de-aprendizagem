@@ -40,6 +40,10 @@
                 </div>
 
 
+
+
+
+
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
                 <div class="mt-4">
                     <x-label for="terms">

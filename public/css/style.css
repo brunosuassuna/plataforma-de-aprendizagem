@@ -1,3 +1,69 @@
+    /* Estilos para o layout */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        background-color: #f8f8f8;
+      }
+
+      main {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        width: 90%;
+      }
+
+      section {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      section h2 {
+        margin-top: 0;
+      }
+
+      form {
+        display: grid;
+        gap: 10px;
+      }
+
+      .campo {
+        display: grid;
+        gap: 5px;
+      }
+
+      .campo label {
+        font-weight: bold;
+      }
+
+      .campo input, .campo textarea, .campo select {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      button {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        background-color: #4caf50;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+
 #logo {
     width: 100px; /* Define a largura do elemento com o ID "logo" como 100 pixels */
 }

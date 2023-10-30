@@ -3,10 +3,9 @@
 @section('title', 'Área do Professor')
 
 @section('content')
-    <h1> Bem Vindo Professor! </h1>
+    <h1> Bem Vindo, Professor! </h1>
 
     <div>
-
 
         <div class="course-card" id="prof-card">
             <img src="/img/video-aula.png" alt="Cadastrar Aula" class="course-image" id="prof-img">

@@ -7,11 +7,13 @@
         </x-slot>
         <x-validation-errors class="mb-4" />
 
+
         @if (session('status'))
             <div class="mb-4 font-medium text-sm text-green-600">
                 {{ session('status') }}
             </div>
         @endif
+
 
         <form method="POST" action="{{ route('login') }}">
             @csrf
@@ -39,6 +41,7 @@
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif
+
 
                 <x-button class="ml-4">
                     {{ __('Log in') }}

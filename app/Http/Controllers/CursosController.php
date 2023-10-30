@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\User;
 use App\Models\Aula;
+use App\Models\Avaliacao;
 
 class CursosController extends Controller
 {
@@ -26,6 +28,7 @@ class CursosController extends Controller
         $aulas = Aula::all();
         return view('cursos.php', ['aulas' => $aulas]);
     }
+
     public function laravel()
     {
         $aulas = Aula::all();
@@ -44,11 +47,17 @@ class CursosController extends Controller
 
     public function areaprofessor()
     {
-        return view('professor.areaprofessor');
+            // Somente professores podem acessar esta página
+            if (auth()->user()->professor === 1) {
+                return view('professor.areaprofessor');
+            } else {
+                return redirect('/')->with('msg', 'Somente professores podem acessar esta área!');
+            }
     }
     public function avaliacao()
     {
-        return view('professor.avaliacao');
+        $avaliacaos = Avaliacao::all();
+        return view('professor.avaliacao', ['avaliacaos' => $avaliacaos]);
     }
 
     public function areaaluno()
@@ -83,4 +92,14 @@ class CursosController extends Controller
         return redirect('/')->with('msg', 'Aula Criada!');
     }
 
+
+    public function show($id) {
+
+        $aula = Aula::findOrFail($id);
+
+        return view('cursos.show', ['aula' => $aula]);
+
+    }
 }
+
+

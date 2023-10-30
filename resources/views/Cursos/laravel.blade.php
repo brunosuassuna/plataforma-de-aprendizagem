@@ -19,7 +19,7 @@
 
             <div class="course-card">
                 <a href="#" class="course-link"></a>
-                <img src="#" alt="Logotipo do Brothers Learning" class="course-image">
+                <img src="/img/laravel.png" alt="Logotipo do Brothers Learning" class="course-image">
                 <h5>{{ $aula->nomeaula }}</h5>
                 <div class="overlay">
                     <h5>{{ $aula->conteudo }}</h5>

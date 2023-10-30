@@ -13,25 +13,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 use App\Http\Controllers\CursosController;
+use App\Http\Controllers\ProfessorController;
 
 Route::get('/', [CursosController::class, 'index'] );
-Route::get('/cursos/nossoscursos', [CursosController::class, 'nossoscursos'] );
-Route::get('/cursos/create', [CursosController::class, 'create'] );
+Route::get('/cursos/create', [CursosController::class, 'create'] )->middleware('auth');
 Route::post('/cursos', [CursosController::class, 'store'] );
-Route::post('/contato', [CursosController::class, 'contact'] );
-
-
-
-
 
 
 Route::get('/cursos/php', [CursosController::class, 'php'] );
+Route::get('/cursos/php/{id}', [CursosController::class, 'show'] );
 Route::get('/cursos/laravel', [CursosController::class, 'laravel'] );
 Route::get('/cursos/mysql', [CursosController::class, 'mysql'] );
 Route::get('/cursos/docker', [CursosController::class, 'docker'] );
-Route::get('/professor/areaprofessor', [CursosController::class, 'areaprofessor'] );
-Route::get('/professor/avaliacao', [CursosController::class, 'avaliacao'] );
-Route::get('/aluno/areaaluno', [CursosController::class, 'areaaluno'] );
+
+Route::get('/professor/areaprofessor', [CursosController::class, 'areaprofessor'])->middleware('auth');
+
+
+Route::post('/professor', [ProfessorController::class, 'store2'] );
+
+
+
+Route::get('/professor/avaliacao', [CursosController::class, 'avaliacao'] )->middleware('auth');
+Route::get('/aluno/areaaluno', [CursosController::class, 'areaaluno'] )->middleware('auth');
 Route::get('/contato/areacontato', [CursosController::class, 'areacontato'] );
 
 
