@@ -1,3 +1,46 @@
+#aula {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#video-aula {
+    width: 100%;
+    height: auto;
+}
+
+#video-aula img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+th {
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+td {
+    text-align: left;
+}
+
+.table-striped tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.table-striped tr:hover {
+    background-color: #ddd;
+}
+
     /* Estilos para o layout */
     body {
         font-family: Arial, sans-serif;

@@ -5,6 +5,9 @@
 @section('content')
 
 
+    <title>Área do Professor</title>
+    </head>
+
     <body>
         <header>
             <h1>Página de avaliação do professor</h1>
@@ -12,7 +15,7 @@
         <main>
             <section class="avaliacoes">
                 <h2>Avaliações criadas</h2>
-                <table>
+                <table class="table table-striped">
                     <thead>
                         <tr>
                             <th>Curso</th>
@@ -22,17 +25,17 @@
                             <th>Status</th>
                         </tr>
                     </thead>
-                    @foreach ($avaliacaos as $avaliacao)
                     <tbody>
-                        <tr>
-                            <td>{{ $avaliacao->curso }}</td>
-                            <td>{{ $avaliacao->titulo }}</td>
-                            <td>{{ $avaliacao->tipo }}</td>
-                            <td>{{ $avaliacao->data }}</td>
-                            <td>{{ $avaliacao->status }}</td>
-                        </tr>
-                        </tbody>
+                        @foreach ($avaliacaos as $avaliacao)
+                            <tr>
+                                <td>{{ $avaliacao->curso }}</td>
+                                <td>{{ $avaliacao->titulo }}</td>
+                                <td>{{ $avaliacao->tipo }}</td>
+                                <td>{{ $avaliacao->data }}</td>
+                                <td>{{ $avaliacao->status }}</td>
+                            </tr>
                         @endforeach
+                    </tbody>
                 </table>
             </section>
             <section class="nova-avaliacao">
@@ -83,8 +86,5 @@
                 </form>
             </section>
         </main>
-
-
-
-
-    @endsection
+    </body>
+@endsection

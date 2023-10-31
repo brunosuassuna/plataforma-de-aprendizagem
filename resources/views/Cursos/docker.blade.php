@@ -17,12 +17,13 @@
     @if ($aula->curso == "docker")
 
             <div class="course-card">
-                <a href="#" class="course-link"></a>
+                <a href="#" class="course-link">
                 <img src="#" alt="Logotipo do Brothers Learning" class="course-image">
                 <h5>{{ $aula->nomeaula }}</h5>
                 <div class="overlay">
                     <h5>{{ $aula->conteudo }}</h5>
                 </div>
+            </a>
             </div>
             @endif
         @endforeach

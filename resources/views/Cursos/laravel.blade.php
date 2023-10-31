@@ -18,12 +18,14 @@
     @if ($aula->curso == "laravel")
 
             <div class="course-card">
-                <a href="#" class="course-link"></a>
-                <img src="/img/laravel.png" alt="Logotipo do Brothers Learning" class="course-image">
+                <a href="/cursos/php/{{ $aula->id }}" class="course-link">
+                <img src="/img/modelo5.png" alt="Logotipo do Brothers Learning" class="course-image">
                 <h5>{{ $aula->nomeaula }}</h5>
                 <div class="overlay">
+
                     <h5>{{ $aula->conteudo }}</h5>
                 </div>
+            </a>
             </div>
             @endif
         @endforeach

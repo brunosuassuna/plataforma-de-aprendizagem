@@ -17,12 +17,13 @@ O PHP é uma linguagem de programação multiplataforma, open source, gratuita e
     @foreach ($aulas as $aula)
     @if ($aula->curso == "php")
             <div class="course-card">
-                <a href="/cursos/php/{{ $aula->id }}" class="course-link"></a>
+                <a href="/cursos/php/{{ $aula->id }}" class="course-link">
                 <img src="#" alt="Logotipo do Brothers Learning" class="course-image">
                 <h5>{{ $aula->nomeaula }}</h5>
                 <div class="overlay">
                     <h5>{{ $aula->conteudo }}</h5>
                 </div>
+            </a>
             </div>
             @endif
         @endforeach
