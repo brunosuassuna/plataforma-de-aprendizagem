@@ -1,35 +1,34 @@
 <div class="p-6 lg:p-8 bg-white border-b border-gray-200">
     <img style="width: 150px;" id="logo" src="/img/modelo5.jpeg" alt="Brothers Learning"> <!-- Logo do site -->
-
+    <style> main  {    background-image: linear-gradient(180deg, #4e4c5d, rgb(255, 255, 255)); }
+    </style>
     <h1 class="mt-8 text-2xl font-medium text-gray-900">
-        Welcome to your Jetstream application!
+        Bem-vindo à Brothers Learning!
     </h1>
 
     <p class="mt-6 text-gray-500 leading-relaxed">
-        Laravel Jetstream provides a beautiful, robust starting point for your next Laravel application. Laravel is designed
-        to help you build your application using a development environment that is simple, powerful, and enjoyable. We believe
-        you should love expressing your creativity through programming, so we have spent time carefully crafting the Laravel
-        ecosystem to be a breath of fresh air. We hope you love it.
+        Uma plataforma de aprendizagem online para expandir seus conhecimentos. <br>
+        Explore nossos cursos, aprimore suas habilidades e alcance novos patamares acadêmicos.
     </p>
 </div>
 
-<div class="bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 p-6 lg:p-8">
-    <div>
-        <div class="flex items-center">
+    <div id="corpo" class="bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 p-6 lg:p-8">
+        <div>
+            <div class="flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-6 h-6 stroke-gray-400">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
             </svg>
             <h2 class="ml-3 text-xl font-semibold text-gray-900">
-                <a href="https://laravel.com/docs">Documentação Para Instalação</a>
+                <a href="https://www.php.net/manual/pt_BR/faq.installation.php">Documentação Para Instalação</a>
             </h2>
         </div>
 
         <p class="mt-4 text-gray-500 text-sm leading-relaxed">
-            O Laravel possui uma documentação maravilhosa cobrindo todos os aspectos do framework. Quer você seja novo no framework ou tenha experiência anterior, recomendamos a leitura de toda a documentação do começo ao fim.
+            O PHP é uma linguagem de programação amplamente utilizada para o desenvolvimento web, reconhecida por sua flexibilidade e poder. Seja você um novato ou um desenvolvedor experiente, compreender o PHP é fundamental para construir aplicativos web dinâmicos e escaláveis.
         </p>
 
         <p class="mt-4 text-sm">
-            <a href="/cursos/laravel" class="inline-flex items-center font-semibold text-indigo-700">
+            <a href="/cursos/php" class="inline-flex items-center font-semibold text-indigo-700">
                 Nosso Curso
 
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="ml-1 w-5 h-5 fill-indigo-500">
@@ -45,16 +44,17 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
             </svg>
             <h2 class="ml-3 text-xl font-semibold text-gray-900">
-                <a href="https://docs.docker.com/desktop/">Documentação Para Instalação</a>
+                <a href="https://laravel.com/docs">Documentação Para Instalação</a>
             </h2>
         </div>
 
         <p class="mt-4 text-gray-500 text-sm leading-relaxed">
-            O Docker é uma ferramenta poderosa e versátil que revolucionou a maneira como os aplicativos são desenvolvidos, distribuídos e executados. Seja você um novato ou um profissional experiente, a compreensão do Docker é fundamental para simplificar processos de desenvolvimento, implementação e gerenciamento de aplicativos.
+            O Laravel possui uma documentação maravilhosa cobrindo todos os aspectos do framework. Quer você seja novo no framework ou tenha experiência anterior, recomendamos a leitura de toda a documentação do começo ao fim.
+
         </p>
 
         <p class="mt-4 text-sm">
-            <a href="/cursos/docker" class="inline-flex items-center font-semibold text-indigo-700">
+            <a href="/cursos/laravel" class="inline-flex items-center font-semibold text-indigo-700">
                 Nosso Curso
 
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="ml-1 w-5 h-5 fill-indigo-500">
@@ -94,12 +94,13 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
             </svg>
             <h2 class="ml-3 text-xl font-semibold text-gray-900">
-                Documentação Para Instalação
+                <a href="https://docs.docker.com/desktop/">Documentação Para Instalação</a>
             </h2>
+
         </div>
 
         <p class="mt-4 text-gray-500 text-sm leading-relaxed">
-            Authentication and registration views are included with Laravel Jetstream, as well as support for user email verification and resetting forgotten passwords. So, you're free to get started with what matters most: building your application.
+            O Docker é uma ferramenta poderosa e versátil que revolucionou a maneira como os aplicativos são desenvolvidos, distribuídos e executados. Seja você um novato ou um profissional experiente, a compreensão do Docker é fundamental para simplificar processos de desenvolvimento, implementação e gerenciamento de aplicativos.
         </p>
         <p class="mt-4 text-sm">
             <a href="/cursos/docker" class="inline-flex items-center font-semibold text-indigo-700">
@@ -112,3 +113,4 @@
         </p>
     </div>
 </div>
+

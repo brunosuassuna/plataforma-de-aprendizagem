@@ -20,9 +20,16 @@
             <textarea class="form-control" id="conteudo" name="conteudo" rows="3" placeholder="Descreva o conteúdo da aula"></textarea>
         </div>
         <div class="form-group">
-            <label for="title">Curso:</label>
-            <input type="type" class="form-control-file" id="curso" name="curso">
+            <label for="curso">Curso</label>
+            <select name="curso" id="curso" required>
+                <option value="" disabled selected>Selecione o curso</option>
+                <option value="php">Php</option>
+                <option value="laravel">Laravel</option>
+                <option value="mysql">Mysql</option>
+                <option value="docker">Docker</option>
+            </select>
         </div>
+        
 
 
         <div class="form-group">

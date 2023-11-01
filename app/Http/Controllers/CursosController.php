@@ -78,15 +78,19 @@ class CursosController extends Controller
         $aula->curso = $request->curso;
 
         // Verifique se um arquivo de vídeo foi enviado
-        if ($request->hasFile('videoaula')) {
-            $file = $request->file('videoaula');
+        if ($request->hasFile('videoaula') && $request->file('videoaula')->isValid()) {
 
-            // Determine um local para salvar o arquivo, por exemplo, na pasta de uploads
-            $path = $file->store('uploads');
+         $requestVideoaula = $request->videoaula;
 
-            $aula->videoaula = $path; // Salve o caminho do arquivo no banco de dados
+         $extension = $requestVideoaula->extension();
+
+         $nomevideoaula = md5($requestVideoaula->getClientOriginalName() . strtotime("now")) . "." . $extension;
+
+         $requestVideoaula->move(public_path('aulas'),$nomevideoaula);
+
+         $aula->videoaula = $nomevideoaula;
+
         }
-
         $aula->save();
 
         return redirect('/')->with('msg', 'Aula Criada!');
@@ -101,5 +105,3 @@ class CursosController extends Controller
 
     }
 }
-
-

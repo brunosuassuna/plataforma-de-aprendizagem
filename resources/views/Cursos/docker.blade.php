@@ -17,7 +17,7 @@
     @if ($aula->curso == "docker")
 
             <div class="course-card">
-                <a href="#" class="course-link">
+                <a href="/cursos/docker/{{ $aula->id }}" class="course-link">
                 <img src="#" alt="Logotipo do Brothers Learning" class="course-image">
                 <h5>{{ $aula->nomeaula }}</h5>
                 <div class="overlay">
