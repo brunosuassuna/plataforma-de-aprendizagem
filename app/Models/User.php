@@ -64,4 +64,7 @@ class User extends Authenticatable
     public function aula(){
         return $this->hasMany('App\Models\Aula');
     }
+    public function aulas() {
+        return $this->hasMany('App\Models\Aula');
+    }
 }

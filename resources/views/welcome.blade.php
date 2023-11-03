@@ -4,6 +4,16 @@
 
 @section('content')
 
+<h1 class="mt-8 text-2xl font-medium text-gray-900">
+    Bem-vindo à Brothers Learning!
+</h1>
+
+<p>
+
+    Uma plataforma de aprendizagem online para expandir seus conhecimentos. <br>
+    Explore nossos cursos, aprimore suas habilidades e alcance novos patamares acadêmicos.
+</p>
+<h2> Conheça nossos cursos: </h2>
 
 <div class="course-grid">
     <div class="course-card">

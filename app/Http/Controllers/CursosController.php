@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Aula;
 use App\Models\Avaliacao;
+use App\Models\Comentario;
 
 class CursosController extends Controller
 {
@@ -47,12 +48,12 @@ class CursosController extends Controller
 
     public function areaprofessor()
     {
-            // Somente professores podem acessar esta página
-            if (auth()->user()->professor === 1) {
-                return view('professor.areaprofessor');
-            } else {
-                return redirect('/')->with('msg', 'Somente professores podem acessar esta área!');
-            }
+        // Somente professores podem acessar esta página
+        if (auth()->user()->professor === 1) {
+            return view('professor.areaprofessor');
+        } else {
+            return redirect('/')->with('msg', 'Somente professores podem acessar esta área!');
+        }
     }
     public function avaliacao()
     {
@@ -80,28 +81,84 @@ class CursosController extends Controller
         // Verifique se um arquivo de vídeo foi enviado
         if ($request->hasFile('videoaula') && $request->file('videoaula')->isValid()) {
 
-         $requestVideoaula = $request->videoaula;
+            $requestVideoaula = $request->videoaula;
 
-         $extension = $requestVideoaula->extension();
+            $extension = $requestVideoaula->extension();
 
-         $nomevideoaula = md5($requestVideoaula->getClientOriginalName() . strtotime("now")) . "." . $extension;
+            $nomevideoaula = md5($requestVideoaula->getClientOriginalName() . strtotime("now")) . "." . $extension;
 
-         $requestVideoaula->move(public_path('aulas'),$nomevideoaula);
+            $requestVideoaula->move(public_path('aulas'), $nomevideoaula);
 
-         $aula->videoaula = $nomevideoaula;
-
+            $aula->videoaula = $nomevideoaula;
         }
         $aula->save();
 
         return redirect('/')->with('msg', 'Aula Criada!');
     }
 
+    public function store3(Request $request)
+    {
+        $comentario = new Comentario;
 
-    public function show($id) {
+        $comentario->texto = $request->texto;
+        $comentario->user_id = auth()->user()->id;
+        $comentario->aula_id = $request->id;
 
+        $comentario->save();
+
+
+        return redirect('/cursos/php')->with('msg', 'Comentário enviado');
+
+    }
+    public function store4(Request $request)
+    {
+        $comentario = new Comentario;
+
+        $comentario->texto = $request->texto;
+        $comentario->user_id = auth()->user()->id;
+        $comentario->aula_id = $request->id;
+
+        $comentario->save();
+
+
+        return redirect('/cursos/laravel')->with('msg', 'Comentário enviado');
+
+    }
+    public function store5(Request $request)
+    {
+        $comentario = new Comentario;
+
+        $comentario->texto = $request->texto;
+        $comentario->user_id = auth()->user()->id;
+        $comentario->aula_id = $request->id;
+
+        $comentario->save();
+
+
+        return redirect('/cursos/mysql')->with('msg', 'Comentário enviado');
+
+    }
+    public function store6(Request $request)
+    {
+        $comentario = new Comentario;
+
+        $comentario->texto = $request->texto;
+        $comentario->user_id = auth()->user()->id;
+        $comentario->aula_id = $request->id;
+
+        $comentario->save();
+
+
+        return redirect('/cursos/docker')->with('msg', 'Comentário enviado');
+
+    }
+    public function show($id)
+    {
         $aula = Aula::findOrFail($id);
-
-        return view('cursos.show', ['aula' => $aula]);
+        $c = Comentario::findOrFail($id);
+        $comentarios = Comentario::all();
+        $autorComentario = User::where('id', $c->user_id)->first()->toArray();
+        return view('cursos.show', ['aula' => $aula],['comentarios' => $comentarios, 'autorComentario'=> $autorComentario]);
 
     }
 }

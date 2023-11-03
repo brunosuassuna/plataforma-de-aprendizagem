@@ -1,3 +1,5 @@
+
+
 #aula {
     width: 100%;
     margin: 0 auto;
@@ -25,6 +27,13 @@
     padding: 20px;
     margin-top: 20px;
 }
+
+.conteudo-card p {
+    padding: 20px;
+    overflow: auto;
+    height: 100px;
+}
+
 .comentarios-card {
     border: 1px solid #C3E6CB; /* Adiciona uma borda de 1 pixel sólida com a cor #C3E6CB à classe .msg */
     text-align: center; /* Alinha o texto ao centro na classe .msg */
@@ -237,7 +246,7 @@ td {
 body {
     /* Estilos do corpo da página */
     background-color: #e5e3e3; /* Cor de fundo do corpo */
-    background-image: linear-gradient(180deg, #4e4c5d, rgb(255, 255, 255)); /* Imagem de fundo - um degradê linear */
+    background-image: linear-gradient(180deg, #ccd3cb, rgb(255, 255, 255)); /* Imagem de fundo - um degradê linear */
     background-repeat: no-repeat; /* Não repetir a imagem de fundo */
     background-position: center center; /* Posição centralizada da imagem de fundo */
     background-size: cover; /* Ajustar o tamanho da imagem para cobrir todo o corpo */

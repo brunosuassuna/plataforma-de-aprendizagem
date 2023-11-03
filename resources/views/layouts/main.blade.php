@@ -25,7 +25,8 @@
 </head>
 
 <body>
-    <header class="d-flex flex-row justify-content-between">
+
+  <header class="d-flex flex-row justify-content-between">
         <a href="/" class="navbar-brand">
             <img id="logo" src="/img/modelo5.jpeg" alt="Brothers Learning"> <!-- Logo do site -->
         </a>
@@ -38,13 +39,11 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="/aluno/areaaluno" class="nav-link">Área do Aluno</a>
+                        <a href="/dashboard" class="nav-link">Dashboard</a>
                     </li>
 
 
                     @auth <!-- Se o usuário estiver autenticado -->
-
-
 
                         <li class="nav-item">
                             <form action="/logout" method="POST">
@@ -69,6 +68,7 @@
                 </ul>
             </div>
         </nav>
+
     </header>
 
     <main>
