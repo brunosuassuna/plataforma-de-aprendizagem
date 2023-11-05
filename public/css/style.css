@@ -1,47 +1,49 @@
+/* Paleta de cores */
+:root {
+    --primary-color: #1d2435;
+    --secondary-color: #fff;
+  }
 
 
-#aula {
-    width: 100%;
-    margin: 0 auto;
-    max-height: 100vh;
-    overflow-y: hidden;
-}
+  /* ESTILO DAS VIDEOAULAS */
+  .video-card video {
+      max-width: 100%;
+      max-height: 100%;
+  }
 
+  .video-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 500px; /* Altura desejada para a div */
+      border: 1px solid var(--primary-color); /* Adiciona uma borda de 1 pixel sólida com a cor #1d2435 à classe .video-card */
+      flex-wrap: wrap; /* Permite que os elementos de conteúdo se alinhem horizontalmente quando a largura da janela de visualização for menor que a largura dos elementos */
+  }
 
-/* ESTILO DAS VIDEOAULAS */
-.video-card video {
-    max-width: 100%;
-    max-height: 100%;
-}
+  .conteudo-card {
+      border: 1px solid var(--primary-color); /* Adiciona uma borda de 1 pixel sólida com a cor #1d2435 à classe .msg */
+      text-align: center; /* Alinha o texto ao centro na classe .msg */
+      padding: 20px;
+      margin-top: 20px;
+      tabindex: 0; /* Permite que os elementos de conteúdo sejam selecionados pelo teclado */
 
-.video-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px; /* Altura desejada para a div */
-}
+  }
 
-.conteudo-card {
-    border: 1px solid #C3E6CB; /* Adiciona uma borda de 1 pixel sólida com a cor #C3E6CB à classe .msg */
-    text-align: center; /* Alinha o texto ao centro na classe .msg */
-    padding: 20px;
-    margin-top: 20px;
-}
+  .conteudo-card p {
+      padding: 20px;
+      overflow: auto;
+      height: 100px;
+      color: var(--secondary-color); /* Define a cor do texto como #fff */
+      font-size: 1.2em; /* Aumenta o tamanho da fonte para 1.2 vezes o tamanho padrão */
+      aria-label: "Conteúdo da videoaula"; /* Fornece uma descrição do conteúdo */
+  }
 
-.conteudo-card p {
-    padding: 20px;
-    overflow: auto;
-    height: 100px;
-}
-
-.comentarios-card {
-    border: 1px solid #C3E6CB; /* Adiciona uma borda de 1 pixel sólida com a cor #C3E6CB à classe .msg */
-    text-align: center; /* Alinha o texto ao centro na classe .msg */
-    padding: 20px;
-    margin-top: 20px;
-}
-
-
+  .comentarios-card {
+      border: 1px solid var(--primary-color); /* Adiciona uma borda de 1 pixel sólida com a cor #1d2435 à classe .msg */
+      text-align: center; /* Alinha o texto ao centro na classe .msg */
+      padding: 20px;
+      margin-top: 20px;
+  }
 
 table {
     border-collapse: collapse;
@@ -70,91 +72,102 @@ td {
     background-color: #ddd;
 }
 
-    /* Estilos para o layout */
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        display: grid;
-        place-items: center;
-        min-height: 100vh;
-        background-color: #f8f8f8;
-      }
-
-      main {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-        max-width: 1200px;
-        width: 90%;
-      }
-
-      section {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-
-      section h2 {
-        margin-top: 0;
-      }
-
-      form {
-        display: grid;
-        gap: 10px;
-      }
-
-      .campo {
-        display: grid;
-        gap: 5px;
-      }
-
-      .campo label {
-        font-weight: bold;
-      }
-
-      .campo input, .campo textarea, .campo select {
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-
-      button {
-        padding: 8px 16px;
-        border: none;
-        border-radius: 4px;
-        background-color: #4caf50;
-        color: white;
-        font-weight: bold;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      button:hover {
-        background-color: #45a049;
-      }
-
-
-#logo {
-    width: 100px; /* Define a largura do elemento com o ID "logo" como 100 pixels */
+    /* Reset de Estilos */
+@charset "UTF-8";
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
 }
+
+/* Estilos Globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: #F5DEB3 !important; /* Adicione !important para aumentar a prioridade */
+}
+
+/* Layout Principal */
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1600px;
+    width: 90%;
+    justify-content: center; /* Centraliza no eixo horizontal */
+
+}
+
+/* Seção */
+section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    margin-top: 0;
+}
+
+/* Formulário */
+form {
+    display: grid;
+    gap: 10px;
+}
+
+.campo {
+    display: grid;
+    gap: 5px;
+}
+
+.campo label {
+    font-weight: bold;
+}
+
+.campo input,
+.campo textarea,
+.campo select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Elementos Específicos */
+#logo {
+    width: 100px;
+    display: flex;
+    align-items: center; /* Ajusta o alinhamento vertical se necessário */
+
+}
+
 
 .msg {
-    background-color: #D4EDDA; /* Define a cor de fundo da classe .msg */
-    color: #155724; /* Define a cor do texto para a classe .msg */
-    border: 1px solid #C3E6CB; /* Adiciona uma borda de 1 pixel sólida com a cor #C3E6CB à classe .msg */
-    width: 100%; /* Define a largura da classe .msg como 100% do seu contêiner pai */
-    margin-top: 0; /* Remove a margem superior da classe .msg */
-    text-align: center; /* Alinha o texto ao centro na classe .msg */
-    padding: 10px; /* Adiciona um preenchimento interno de 10 pixels na classe .msg */
-}
-
-@charset "UTF-8"; /* Declara a codificação de caracteres do CSS como UTF-8 */
-
-* {
-    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Define a família de fontes para todo elemento (*) como Verdana, Geneva, Tahoma, sans-serif */
-    box-sizing: border-box; /* Define o modelo de caixa como border-box para todos os elementos */
+    background-color: #D4EDDA;
+    color: #155724;
+    border: 1px solid #C3E6CB;
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+    padding: 10px;
 }
 
 
@@ -244,76 +257,73 @@ td {
 /* ELEMENTOS DA INTERFACE */
 
 body {
-    /* Estilos do corpo da página */
-    background-color: #e5e3e3; /* Cor de fundo do corpo */
-    background-image: linear-gradient(180deg, #ccd3cb, rgb(255, 255, 255)); /* Imagem de fundo - um degradê linear */
-    background-repeat: no-repeat; /* Não repetir a imagem de fundo */
-    background-position: center center; /* Posição centralizada da imagem de fundo */
-    background-size: cover; /* Ajustar o tamanho da imagem para cobrir todo o corpo */
-    background-attachment: fixed; /* A imagem de fundo está fixa enquanto a página é rolada */
-
-    display: flex; /* Usar flexbox para o layout do corpo */
-    flex-direction: column; /* Direção da organização dos elementos (de cima para baixo) */
-    flex-wrap: nowrap; /* Evitar que os elementos se quebrem em várias linhas */
-    justify-content: center; /* Centralizar verticalmente os itens */
-    align-items: center; /* Centralizar horizontalmente os itens */
-    min-height: 100vh; /* Altura mínima de 100% da altura da janela de visualização */
+    background-color: #DEB887; /* Cor de fundo mais escura */
+    color: #333; /* Cor do texto mais escura */
 }
 
 header, section, article {
-    /* Estilos para os cabeçalhos, seções e artigos */
-    max-width: 700px; /* Largura máxima de 700 pixels */
-    padding: 20px; /* Preenchimento interno de 20 pixels */
+    max-width: 700px;
+    padding: 20px;
 }
 
 header > h1 {
-    /* Estilos para o título do cabeçalho */
-    color: white; /* Cor do texto em branco */
-    text-shadow: 3px 3px 0px black; /* Sombra de texto */
+    color: white;
+    text-shadow: 3px 3px 0px black;
 }
 
 main, section, article {
-    /* Estilos para o conteúdo principal, seções e artigos */
-    background-color: white; /* Cor de fundo branca */
-    padding: 15px; /* Preenchimento interno de 15 pixels */
-    margin-bottom: 20px; /* Margem inferior de 20 pixels */
-    border-radius: 10px; /* Borda arredondada com raio de 10 pixels */
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.502); /* Sombra ao redor do elemento */
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.502);
 }
 
 footer {
-    /* Estilos para o rodapé */
-    display: block; /* Exibir como bloco */
-    width: 100vw; /* Largura total da janela de visualização */
-    background-color: #0c0c0d; /* Cor de fundo */
-    color: white; /* Cor do texto */
-    text-align: center; /* Alinhamento do texto centralizado */
-    margin-top: auto; /* Margem superior automática */
-    padding: 5px; /* Preenchimento interno de 5 pixels */
-    margin-right: 10px; /* Define uma margem à direita de 10 pixels para os links dentro do rodapé */
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    background-color: #0c0c0d;
+    color: white;
+    text-align: center;
+    margin-top: auto;
+    padding: 5px;
+    margin-right: 10px;
 }
 
-    p {
-        text-align: justify; /* Alinha o texto justificado no parágrafo */
-        line-height: 1.5em; /* Define a altura da linha do texto como 1.5 vezes o tamanho da fonte */
-    }
+p {
+    text-align: justify;
+    line-height: 1.5em;
+}
 
-    h2, h3, h4 {
-        color: #0f0f0f; /* Define a cor do texto dos títulos h2, h3 e h4 */
-        margin: 0 0 10px 0; /* Define a margem: sem margem no topo e na lateral direita/esquerda, 10 pixels na base */
-    }
+h2, h3, h4 {
+    color: #0f0f0f;
+    margin: 0 0 10px 0;
+}
 
-    a {
-        color: #15142b; /* Define a cor padrão para os links */
-        padding: 0 3px; /* Adiciona um preenchimento de 0 acima/abaixo, 3 pixels à esquerda/direita nos links */
-        font-weight: 600; /* Define o peso da fonte dos links como 600 (negrito) */
-        text-decoration: none; /* Remove a decoração padrão de link (sublinhado) */
-    }
+a {
+    color: #15142b;
+    padding: 0 3px;
+    font-weight: 600;
+    text-decoration: none;
+}
 
-    a:hover {
-        color: #000000; /* Muda a cor do texto para preto ao passar o mouse por cima do link */
-        border-bottom: 1px solid #000000; /* Adiciona uma borda na parte inferior do link ao passar o mouse */
-    }
+a:hover {
+    color: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+header {
+    role: banner;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer a {
+    tabindex: 0;
+}
 
 /* TABELAS E LISTAS */
 
@@ -374,9 +384,13 @@ ul > li::marker {
 /* ELEMENTOS DE FORMULÁRIO */
 
 form {
-    background-color: rgba(55, 41, 145, 0.2); /* Cor de fundo com canal alfa (transparência) */
-    padding: 15px; /* Preenchimento interno de 15 pixels */
-    border-radius: 10px; /* Borda arredondada com raio de 10 pixels */
+    background-color: #f8f8f8; /* Cor de fundo mais escura */
+    color: #333; /* Cor do texto mais escura */
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    padding: 15px;
+    border-radius: 10px;
 }
 
 form label {
@@ -396,60 +410,7 @@ input[type=text], [type=number], select, input[type=date], input[type=date], inp
     padding: 12px 20px; /* Preenchimento interno de 12 pixels no topo e na base, 20 pixels nos lados */
     font-size: 1em; /* Tamanho da fonte é igual ao tamanho padrão */
     margin: 8px 0; /* Define margens superior e inferior de 8 pixels, margens laterais como 0 */
-    display: inline-block; /* Apresenta os elementos como blocos em linha */
+    display: block; /* Apresenta os elementos como blocos */
     border: 1px solid #ccc; /* Adiciona uma borda de 1 pixel sólida com a cor cinza */
     border-radius: 4px; /* Borda arredondada com raio de 4 pixels */
-    box-sizing: border-box; /* Inclui o preenchimento e a borda no tamanho total do elemento */
-}
-input[type=submit] {
-    width: 100%; /* Define a largura do botão de tipo "submit" como 100% do seu contêiner */
-    background-color: #4CAF50; /* Cor de fundo do botão "submit" */
-    font-size: 1em; /* Tamanho da fonte do texto no botão */
-    color: white; /* Cor do texto no botão */
-    padding: 10px 20px; /* Preenchimento interno do botão */
-    margin: 5px 0; /* Margem externa do botão */
-    border: none; /* Remove a borda do botão */
-    border-radius: 4px; /* Adiciona um raio de borda ao botão */
-    cursor: pointer; /* Altera o cursor para o ícone de ponteiro ao passar o mouse sobre o botão */
-}
-
-input[type=submit]:hover {
-    background-color: #45a049; /* Altera a cor de fundo do botão "submit" quando o mouse passa por cima */
-}
-
-input[type=reset] {
-    /* Estilos semelhantes aos do botão "submit", mas aplicados ao botão de tipo "reset" */
-}
-
-input[type=reset]:hover {
-    /* Alteração da cor de fundo quando o mouse passa por cima, para o botão "reset" */
-}
-
-input[type=button], button {
-    /* Estilos semelhantes aos botões de tipo "submit" e "reset", aplicados a botões de tipo genérico */
-}
-
-input[type=button]:hover, button:hover {
-    /* Alteração da cor de fundo quando o mouse passa por cima, para botões de tipo genérico */
-}
-
-fieldset {
-    border: 0.5px dotted #372991; /* Adiciona uma borda pontilhada ao redor do campo de formulário */
-}
-
-fieldset > legend {
-    font-size: 0.8em; /* Tamanho da fonte para a legenda dentro do fieldset */
-    font-weight: 100; /* Peso da fonte para a legenda */
-    background-color: rgba(15, 15, 17, 0.2); /* Cor de fundo para a legenda */
-    padding: 3px 7px; /* Preenchimento interno da legenda */
-    border-radius: 5px; /* Adiciona um raio de borda à legenda */
-}
-
-input[type=radio] + label,
-input[type=checkbox] + label {
-    /* Estilos para rótulos associados a botões de rádio e caixas de seleção */
-    display: inline-block; /* Define a exibição como blocos em linha */
-    font-size: 1em; /* Tamanho da fonte do rótulo */
-    background-color: rgba(0, 0, 0, 0); /* Cor de fundo do rótulo */
-    /* Falta a continuação do estilo para os rótulos associados a botões de rádio e caixas de seleção */
-}
+    box-sizing: border-box; /* Inclui o preenchimento e a borda no

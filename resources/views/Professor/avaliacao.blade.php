@@ -5,16 +5,16 @@
 @section('content')
 
 
-    <title>Área do Professor</title>
+    <title>Área Do Professor</title>
     </head>
 
     <body>
         <header>
-            <h1>Página de avaliação do professor</h1>
+            <h1>Página De Avaliação Do Professor</h1>
         </header>
         <main>
             <section class="avaliacoes">
-                <h2>Avaliações criadas</h2>
+                <h2>Avaliações Criadas</h2>
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -39,7 +39,7 @@
                 </table>
             </section>
             <section class="nova-avaliacao">
-                <h2>Criar nova avaliação</h2>
+                <h2>Criar Nova Avaliação</h2>
                 <form action="/professor" method="post">
                     @csrf
                     <div class="form-group">

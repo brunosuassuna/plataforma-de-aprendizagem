@@ -6,7 +6,7 @@
 
 
 
-    <img id="logo" src="/img/php-logo.svg" alt="Brothers Learning">
+    <img id="logo" src="/img/php.png" alt="Brothers Learning">
 
     <p>
     <div class="container">

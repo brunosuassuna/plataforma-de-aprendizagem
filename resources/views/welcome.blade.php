@@ -13,12 +13,12 @@
     Uma plataforma de aprendizagem online para expandir seus conhecimentos. <br>
     Explore nossos cursos, aprimore suas habilidades e alcance novos patamares acadêmicos.
 </p>
-<h2> Conheça nossos cursos: </h2>
+<h2> Conheça Nossos Cursos: </h2>
 
 <div class="course-grid">
     <div class="course-card">
         <a href="/cursos/php" class="course-link" title="PHP: Módulo 01 [20 HORAS]">
-            <img src="img/php-logo.svg" alt="Logotipo do Brothers Learning" class="course-image">
+            <img src="img/php.png" alt="Logotipo do Brothers Learning" class="course-image">
             <div class="overlay">
                 <h2 class="course-title">PHP</h2>
                 <p class="course-description">Mais Informações</p>

@@ -35,11 +35,11 @@
                 <ul class="navbar-nav">
 
                     <li class="nav-item">
-                        <a href="/professor/areaprofessor" class="nav-link">Área do Professor</a>
+                        <a href="/professor/areaprofessor" class="card">Área do Professor</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="/dashboard" class="nav-link">Dashboard</a>
+                        <a href="/dashboard" class="card">Dashboard</a>
                     </li>
 
 
@@ -58,10 +58,10 @@
                     @guest <!-- Se o usuário não estiver autenticado -->
 
                         <li class="nav-item">
-                            <a href="/login" class="nav-link">Login</a>
+                            <a href="/login" class="card">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/register" class="nav-link">Cadastre-se</a>
+                            <a href="/register" class="card">Cadastre-se</a>
                         </li>
 
                     @endguest <!-- Fim das verificações de autenticação -->
