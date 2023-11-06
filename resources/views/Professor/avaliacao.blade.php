@@ -46,7 +46,7 @@
                         <label for="curso">Curso</label>
                         <select name="curso" id="curso" required>
                             <option value="" disabled selected>Selecione o curso</option>
-                            <option value="php">Php</option>
+                            <option value="php">PHP</option>
                             <option value="laravel">Laravel</option>
                             <option value="mysql">Mysql</option>
                             <option value="docker">Docker</option>
@@ -60,9 +60,9 @@
                         <label for="tipo">Tipo de avaliação</label>
                         <select name="tipo" id="tipo" required>
                             <option value="" disabled selected>Selecione o tipo</option>
-                            <option value="prova">Prova</option>
-                            <option value="trabalho-escrito">Trabalho escrito</option>
-                            <option value="apresentacao">Apresentação</option>
+                            <option value="Prova">Prova</option>
+                            <option value="Trabalho-Escrito">Trabalho escrito</option>
+                            <option value="Apresentacao">Apresentação</option>
                         </select>
                     </div>
                     <div class="form-group">

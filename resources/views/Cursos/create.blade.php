@@ -23,13 +23,13 @@
             <label for="curso">Curso</label>
             <select name="curso" id="curso" required>
                 <option value="" disabled selected>Selecione o curso</option>
-                <option value="php">Php</option>
+                <option value="php">PHP</option>
                 <option value="laravel">Laravel</option>
                 <option value="mysql">Mysql</option>
                 <option value="docker">Docker</option>
             </select>
         </div>
-        
+
 
 
         <div class="form-group">

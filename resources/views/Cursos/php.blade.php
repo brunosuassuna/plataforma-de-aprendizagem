@@ -6,6 +6,7 @@
 
 
 
+
     <img id="logo" src="/img/php.png" alt="Brothers Learning">
 
     <p>
@@ -23,10 +24,10 @@
     <div>
         <h2>Aulas</h2>
         @foreach ($aulas as $aula)
-            @if ($aula->curso == 'php')
+            @if ($aula->curso =='php')
                 <div class="course-card">
                     <a href="/cursos/php/{{ $aula->id }}" class="course-link">
-                        <img src="#" alt="Logotipo do Brothers Learning" class="course-image">
+                        <img src="/img/php.png" alt="Logotipo do php" class="course-image">
                         <h5>{{ $aula->nomeaula }}</h5>
                         <div class="overlay">
                             <h5>{{ $aula->conteudo }}</h5>

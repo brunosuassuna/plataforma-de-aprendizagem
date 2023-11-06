@@ -155,10 +155,24 @@ class CursosController extends Controller
     public function show($id)
     {
         $aula = Aula::findOrFail($id);
-        $c = Comentario::findOrFail($id);
-        $comentarios = Comentario::all();
-        $autorComentario = User::where('id', $c->user_id)->first()->toArray();
-        return view('cursos.show', ['aula' => $aula],['comentarios' => $comentarios, 'autorComentario'=> $autorComentario]);
 
+        $c = Comentario::find($id);
+        if ($c === null) {
+            $c = new Comentario(); // Se não encontrou, cria um novo Comentario vazio
+        }
+
+        $comentarios = Comentario::all();
+        $users = User::all();
+        $autorComentario = ($c->user_id) ? User::where('id', $c->user_id)->first()->toArray() : null;
+        $semComentario = Comentario::where('aula_id', $aula->id)->doesntExist();
+
+        return view('cursos.show', [
+            'aula' => $aula,
+            'comentarios' => $comentarios,
+            'autorComentario' => $autorComentario,
+            'users' => $users,
+            'semComentario' => $semComentario
+        ]);
     }
+
 }

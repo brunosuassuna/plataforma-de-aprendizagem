@@ -9,12 +9,8 @@
     <!-- Define o título da página, que pode ser substituído em cada visualização específica -->
 
     <!-- Links para fontes e estilos -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <!-- Scripts para funcionalidades JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -26,7 +22,7 @@
 
 <body>
 
-  <header class="d-flex flex-row justify-content-between">
+  <header class="container">
         <a href="/" class="navbar-brand">
             <img id="logo" src="/img/modelo5.jpeg" alt="Brothers Learning"> <!-- Logo do site -->
         </a>
@@ -41,10 +37,8 @@
                     <li class="nav-item">
                         <a href="/dashboard" class="card">Dashboard</a>
                     </li>
-
-
+                    
                     @auth <!-- Se o usuário estiver autenticado -->
-
                         <li class="nav-item">
                             <form action="/logout" method="POST">
                                 @csrf <!-- Token CSRF para segurança -->

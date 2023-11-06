@@ -24,7 +24,7 @@
             @if ($aula->curso == 'mysql')
                 <div class="course-card">
                     <a href="/cursos/mysql/{{ $aula->id }}" class="course-link">
-                        <img src="#" alt="Logotipo do Brothers Learning" class="course-image">
+                        <img src="/img/mysql-logo.png" alt="Logotipo do Brothers Learning" class="course-image">
                         <h5>{{ $aula->nomeaula }}</h5>
                         <div class="overlay">
                             <h5>{{ $aula->conteudo }}</h5>

@@ -2,55 +2,119 @@
 :root {
     --primary-color: #1d2435;
     --secondary-color: #fff;
-  }
+}
 
 
-  /* ESTILO DAS VIDEOAULAS */
-  .video-card video {
-      max-width: 100%;
-      max-height: 100%;
-  }
+/* ESTILO DAS VIDEOAULAS */
+.aula-div {
+    margin-top: 20px;
+}
 
-  .video-card {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 500px; /* Altura desejada para a div */
-      border: 1px solid var(--primary-color); /* Adiciona uma borda de 1 pixel sólida com a cor #1d2435 à classe .video-card */
-      flex-wrap: wrap; /* Permite que os elementos de conteúdo se alinhem horizontalmente quando a largura da janela de visualização for menor que a largura dos elementos */
-  }
+.video-card video {
+    max-width: 100%;
+    max-height: 100%;
+}
 
-  .conteudo-card {
-      border: 1px solid var(--primary-color); /* Adiciona uma borda de 1 pixel sólida com a cor #1d2435 à classe .msg */
-      text-align: center; /* Alinha o texto ao centro na classe .msg */
-      padding: 20px;
-      margin-top: 20px;
-      tabindex: 0; /* Permite que os elementos de conteúdo sejam selecionados pelo teclado */
+.video-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    /* Altura desejada para a div */
+    border: 1px solid var(--primary-color);
+    /* Adiciona uma borda de 1 pixel sólida com a cor #1d2435 à classe .video-card */
+    flex-wrap: wrap;
+    /* Permite que os elementos de conteúdo se alinhem horizontalmente quando a largura da janela de visualização for menor que a largura dos elementos */
+}
 
-  }
+.conteudo-card {
+    border: 1px solid var(--primary-color);
+    /* Adiciona uma borda de 1 pixel sólida com a cor #1d2435 à classe .msg */
+    text-align: center;
+    /* Alinha o texto ao centro na classe .msg */
+    padding: 20px;
+    margin-top: 20px;
+    tabindex: 0;
+    /* Permite que os elementos de conteúdo sejam selecionados pelo teclado */
 
-  .conteudo-card p {
-      padding: 20px;
-      overflow: auto;
-      height: 100px;
-      color: var(--secondary-color); /* Define a cor do texto como #fff */
-      font-size: 1.2em; /* Aumenta o tamanho da fonte para 1.2 vezes o tamanho padrão */
-      aria-label: "Conteúdo da videoaula"; /* Fornece uma descrição do conteúdo */
-  }
+}
 
-  .comentarios-card {
-      border: 1px solid var(--primary-color); /* Adiciona uma borda de 1 pixel sólida com a cor #1d2435 à classe .msg */
-      text-align: center; /* Alinha o texto ao centro na classe .msg */
-      padding: 20px;
-      margin-top: 20px;
-  }
+.conteudo-card p {
+    padding: 20px;
+    overflow: auto;
+    height: 100px;
+    font-size: 1.2em;
+    /* Aumenta o tamanho da fonte para 1.2 vezes o tamanho padrão */
+    aria-label: "Conteúdo da videoaula";
+    /* Fornece uma descrição do conteúdo */
+    text-align: center;
+}
+
+.comentarios-card {
+    border: 1px solid var(--primary-color);
+    /* Adiciona uma borda de 1 pixel sólida com a cor #1d2435 à classe .msg */
+    text-align: center;
+    /* Alinha o texto ao centro na classe .msg */
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;
+}
+
+.comentario-prof {
+    text-align: right;
+}
+.comentario-aluno {
+    text-align: left;
+}
+
+.comentario-aluno h5{
+    text-align: left;
+    font-size: 15px;
+    margin-top: -8px;
+    color: gray;
+}
+.comentario-prof h5{
+    text-align: right;
+    font-size: 15px;
+    margin-top: -8px;
+    color: gray;
+}
+.comentario-prof p {
+    background-color: rgb(225, 225, 225);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+
+}
+.comentario-aluno p {
+    background-color: rgb(225, 225, 225);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+
+}
+.prof-icon {
+    width: 50px;
+    padding-left: 10px;
+    float: right;
+}
+.aluno-icon {
+    width: 50px;
+    padding-right: 10px;
+
+    float: left;
+}
+
+
 
 table {
     border-collapse: collapse;
     width: 100%;
 }
 
-th, td {
+th,
+td {
     border: 1px solid #ccc;
     padding: 8px;
 }
@@ -72,34 +136,24 @@ td {
     background-color: #ddd;
 }
 
-    /* Reset de Estilos */
+/* Reset de Estilos */
 @charset "UTF-8";
-* {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    box-sizing: border-box;
-}
+
+
 
 /* Estilos Globais */
 body {
-    font-family: Arial, sans-serif;
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
-    background-color: #F5DEB3 !important; /* Adicione !important para aumentar a prioridade */
+    background-color: #DCDCDC !important;
+    /* Adicione !important para aumentar a prioridade */
 }
 
 /* Layout Principal */
-main {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    max-width: 1600px;
-    width: 90%;
-    justify-content: center; /* Centraliza no eixo horizontal */
-
-}
 
 /* Seção */
 section {
@@ -155,7 +209,8 @@ button:hover {
 #logo {
     width: 100px;
     display: flex;
-    align-items: center; /* Ajusta o alinhamento vertical se necessário */
+    align-items: center;
+    /* Ajusta o alinhamento vertical se necessário */
 
 }
 
@@ -182,10 +237,14 @@ button:hover {
 /* Estilo básico para cada cartão de curso */
 .course-card {
     position: relative;
-    border-radius: 5px; /* Arredonda as bordas do cartão */
-    overflow: hidden; /* Garante que o conteúdo não vaze para fora do cartão */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra sutil */
-    transition: transform 0.2s; /* Adiciona uma transição suave ao efeito de escala */
+    border-radius: 5px;
+    /* Arredonda as bordas do cartão */
+    overflow: hidden;
+    /* Garante que o conteúdo não vaze para fora do cartão */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* Adiciona uma sombra sutil */
+    transition: transform 0.2s;
+    /* Adiciona uma transição suave ao efeito de escala */
     text-align: center;
 }
 
@@ -197,12 +256,14 @@ button:hover {
 /* Estilo para as imagens dos cursos */
 .course-image {
     width: 20%;
-    height: auto; /* Mantém a proporção da imagem */
+    height: auto;
+    /* Mantém a proporção da imagem */
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
 }
+
 /* Sobreposição que aparece quando o mouse passa sobre o cartão */
 .overlay {
     position: absolute;
@@ -210,14 +271,18 @@ button:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.6); /* Fundo com transparência */
-    color: #fff; /* Cor do texto */
+    background: rgba(0, 0, 0, 0.6);
+    /* Fundo com transparência */
+    color: #fff;
+    /* Cor do texto */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    opacity: 0; /* Inicialmente, a sobreposição é invisível */
-    transition: opacity 0.2s; /* Adiciona uma transição suave à opacidade */
+    opacity: 0;
+    /* Inicialmente, a sobreposição é invisível */
+    transition: opacity 0.2s;
+    /* Adiciona uma transição suave à opacidade */
 }
 
 /* Quando o mouse passa sobre o cartão, a sobreposição se torna visível */
@@ -227,13 +292,16 @@ button:hover {
 
 /* Estilo para o título do curso */
 .course-title {
-    font-size: 1.0rem; /* Tamanho da fonte do título */
-    margin: 0; /* Remove as margens padrão para evitar espaçamento indesejado */
+    font-size: 1.0rem;
+    /* Tamanho da fonte do título */
+    margin: 0;
+    /* Remove as margens padrão para evitar espaçamento indesejado */
 }
 
 /* Estilo para a descrição do curso */
 .course-description {
-    font-size: 0.5rem; /* Tamanho da fonte da descrição */
+    font-size: 0.5rem;
+    /* Tamanho da fonte da descrição */
 }
 
 /* AREA DO PROFESSOR */
@@ -244,34 +312,77 @@ button:hover {
 
 #prof-card {
     display: inline-block;
-    width: 48%; /* ajuste a largura conforme necessário */
+    width: 48%;
+    /* ajuste a largura conforme necessário */
     margin: 5px;
 }
 
 .course-card a {
     color: black;
 }
+
 /* PAGINAS DE AUTENTICAÇÃO */
 
 
 /* ELEMENTOS DA INTERFACE */
 
-body {
-    background-color: #DEB887; /* Cor de fundo mais escura */
-    color: #333; /* Cor do texto mais escura */
-}
 
-header, section, article {
+
+section,
+article {
     max-width: 700px;
     padding: 20px;
 }
 
-header > h1 {
-    color: white;
-    text-shadow: 3px 3px 0px black;
+header {
+    color: #DCDCDC;
+    padding: 10px;
+    width: 100vw;
+    display: flow-root;
+
+
+    background-color: white;
+
+    text-align: center;
+    margin-top: auto;
+    padding: 10px;
+    margin-right: 10px;
+    justify-content: center;
+
 }
 
-main, section, article {
+nav {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+}
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    flex-direction: row;
+    margin-left: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+
+
+main,
+section,
+article {
+    margin: 0 auto;
+    width: 70%;
     background-color: white;
     padding: 15px;
     margin-bottom: 20px;
@@ -287,8 +398,9 @@ footer {
     color: white;
     text-align: center;
     margin-top: auto;
-    padding: 5px;
+    padding: 10px;
     margin-right: 10px;
+    justify-content: center;
 }
 
 p {
@@ -296,7 +408,9 @@ p {
     line-height: 1.5em;
 }
 
-h2, h3, h4 {
+h2,
+h3,
+h4 {
     color: #0f0f0f;
     margin: 0 0 10px 0;
 }
@@ -313,13 +427,7 @@ a:hover {
     border-bottom: 1px solid #000000;
 }
 
-header {
-    role: banner;
-}
 
-main {
-    flex-grow: 1;
-}
 
 footer a {
     tabindex: 0;
@@ -328,64 +436,87 @@ footer a {
 /* TABELAS E LISTAS */
 
 table {
-    min-width: 400px; /* Define a largura mínima da tabela como 400 pixels */
-    border-spacing: 0px; /* Remove o espaçamento entre as células da tabela */
-    border: 0.5px solid #000000; /* Adiciona uma borda de 0.5 pixels sólida com cor preta */
-    margin: 10px auto; /* Margens de 10 pixels nas laterais e centraliza a tabela horizontalmente */
+    min-width: 400px;
+    /* Define a largura mínima da tabela como 400 pixels */
+    border-spacing: 0px;
+    /* Remove o espaçamento entre as células da tabela */
+    border: 0.5px solid #000000;
+    /* Adiciona uma borda de 0.5 pixels sólida com cor preta */
+    margin: 10px auto;
+    /* Margens de 10 pixels nas laterais e centraliza a tabela horizontalmente */
 }
 
 table th {
-    background-color: #090909; /* Cor de fundo para os cabeçalhos (th) da tabela */
-    color: white; /* Cor do texto para os cabeçalhos */
-    padding: 5px; /* Preenchimento interno de 5 pixels nos cabeçalhos */
-    text-align: left; /* Alinha o texto dos cabeçalhos à esquerda */
+    background-color: #090909;
+    /* Cor de fundo para os cabeçalhos (th) da tabela */
+    color: white;
+    /* Cor do texto para os cabeçalhos */
+    padding: 5px;
+    /* Preenchimento interno de 5 pixels nos cabeçalhos */
+    text-align: left;
+    /* Alinha o texto dos cabeçalhos à esquerda */
 }
 
 table td {
-    padding: 5px; /* Preenchimento interno de 5 pixels nas células (td) da tabela */
+    padding: 5px;
+    /* Preenchimento interno de 5 pixels nas células (td) da tabela */
 }
 
 table tr {
-    background-color: rgba(55, 41, 145, 0.05); /* Cor de fundo padrão para as linhas da tabela */
+    background-color: rgba(55, 41, 145, 0.05);
+    /* Cor de fundo padrão para as linhas da tabela */
 }
 
 table tr:nth-child(odd) {
-    background-color: rgba(55, 41, 145, 0.3); /* Cor de fundo alternada para linhas ímpares da tabela */
+    background-color: rgba(55, 41, 145, 0.3);
+    /* Cor de fundo alternada para linhas ímpares da tabela */
 }
 
 table.divisao {
-    border: 1px solid white; /* Adiciona uma borda de 1 pixel sólida com a cor branca para a tabela com classe divisao */
+    border: 1px solid white;
+    /* Adiciona uma borda de 1 pixel sólida com a cor branca para a tabela com classe divisao */
 }
 
 table.divisao td {
-    background-color: white; /* Cor de fundo para as células da tabela com classe divisao */
-    padding: 20px; /* Preenchimento interno de 20 pixels nas células da tabela com classe divisao */
-    text-align: center; /* Alinha o texto das células ao centro na tabela com classe divisao */
-    font-size: 2.5em; /* Define o tamanho da fonte como 2.5 vezes o tamanho padrão na tabela com classe divisao */
+    background-color: white;
+    /* Cor de fundo para as células da tabela com classe divisao */
+    padding: 20px;
+    /* Preenchimento interno de 20 pixels nas células da tabela com classe divisao */
+    text-align: center;
+    /* Alinha o texto das células ao centro na tabela com classe divisao */
+    font-size: 2.5em;
+    /* Define o tamanho da fonte como 2.5 vezes o tamanho padrão na tabela com classe divisao */
 }
 
 table.divisao tr:nth-child(1) td:nth-child(2) {
-    border-bottom: 3px solid black; /* Adiciona uma borda inferior de 3 pixels sólida com a cor preta na célula específica da tabela com classe divisao */
-    border-left: 3px solid black; /* Adiciona uma borda à esquerda de 3 pixels sólida com a cor preta na célula específica da tabela com classe divisao */
+    border-bottom: 3px solid black;
+    /* Adiciona uma borda inferior de 3 pixels sólida com a cor preta na célula específica da tabela com classe divisao */
+    border-left: 3px solid black;
+    /* Adiciona uma borda à esquerda de 3 pixels sólida com a cor preta na célula específica da tabela com classe divisao */
 }
 
 table.divisao tr:nth-child(2) td:nth-child(2) {
-    border-left: 3px solid black; /* Adiciona uma borda à esquerda de 3 pixels sólida com a cor preta na célula específica da tabela com classe divisao */
+    border-left: 3px solid black;
+    /* Adiciona uma borda à esquerda de 3 pixels sólida com a cor preta na célula específica da tabela com classe divisao */
 }
 
 table.divisao tr:nth-child(2) td:nth-child(1) {
-    text-decoration: underline; /* Sublinha o texto na célula específica da tabela com classe divisao */
+    text-decoration: underline;
+    /* Sublinha o texto na célula específica da tabela com classe divisao */
 }
 
-ul > li::marker {
-    color: #372991; /* Define a cor dos marcadores para listas não ordenadas */
+ul>li::marker {
+    color: #372991;
+    /* Define a cor dos marcadores para listas não ordenadas */
 }
 
 /* ELEMENTOS DE FORMULÁRIO */
 
 form {
-    background-color: #f8f8f8; /* Cor de fundo mais escura */
-    color: #333; /* Cor do texto mais escura */
+    background-color: #f8f8f8;
+    /* Cor de fundo mais escura */
+    color: #333;
+    /* Cor do texto mais escura */
     display: flex;
     flex-direction: column;
     min-width: 400px;
@@ -394,23 +525,52 @@ form {
 }
 
 form label {
-    display: block; /* Define o elemento como bloco, ocupando toda a largura disponível */
-    width: fit-content; /* A largura se ajusta ao conteúdo interno, não se estende mais do que o necessário */
-    font-size: 0.8em; /* Tamanho da fonte 0.8 vezes o tamanho padrão */
-    font-weight: 100; /* Peso da fonte mais leve */
-    background-color: rgba(55, 41, 145, 0.2); /* Cor de fundo com canal alfa (transparência) */
-    padding: 3px 7px; /* Preenchimento interno de 3 pixels no topo e na base, 7 pixels nos lados */
-    margin-top: 10px; /* Margem superior de 10 pixels */
-    margin-bottom: 0px; /* Sem margem inferior */
-    border-radius: 5px; /* Borda arredondada com raio de 5 pixels */
+    display: block;
+    /* Define o elemento como bloco, ocupando toda a largura disponível */
+    width: fit-content;
+    /* A largura se ajusta ao conteúdo interno, não se estende mais do que o necessário */
+    font-size: 0.8em;
+    /* Tamanho da fonte 0.8 vezes o tamanho padrão */
+    font-weight: 100;
+    /* Peso da fonte mais leve */
+    background-color: rgba(55, 41, 145, 0.2);
+    /* Cor de fundo com canal alfa (transparência) */
+    padding: 3px 7px;
+    /* Preenchimento interno de 3 pixels no topo e na base, 7 pixels nos lados */
+    margin-top: 10px;
+    /* Margem superior de 10 pixels */
+    margin-bottom: 0px;
+    /* Sem margem inferior */
+    border-radius: 5px;
+    /* Borda arredondada com raio de 5 pixels */
 }
 
-input[type=text], [type=number], select, input[type=date], input[type=date], input[type=datetime], input[type=email], input[type=month], input[type=password], input[type=range], input[type=tel], input[type=time], input[type=week] {
-    width: 100%; /* Define a largura para ocupar 100% do espaço disponível */
-    padding: 12px 20px; /* Preenchimento interno de 12 pixels no topo e na base, 20 pixels nos lados */
-    font-size: 1em; /* Tamanho da fonte é igual ao tamanho padrão */
-    margin: 8px 0; /* Define margens superior e inferior de 8 pixels, margens laterais como 0 */
-    display: block; /* Apresenta os elementos como blocos */
-    border: 1px solid #ccc; /* Adiciona uma borda de 1 pixel sólida com a cor cinza */
-    border-radius: 4px; /* Borda arredondada com raio de 4 pixels */
-    box-sizing: border-box; /* Inclui o preenchimento e a borda no
+input[type=text],
+[type=number],
+select,
+input[type=date],
+input[type=date],
+input[type=datetime],
+input[type=email],
+input[type=month],
+input[type=password],
+input[type=range],
+input[type=tel],
+input[type=time],
+input[type=week] {
+    width: 100%;
+    /* Define a largura para ocupar 100% do espaço disponível */
+    padding: 12px 20px;
+    /* Preenchimento interno de 12 pixels no topo e na base, 20 pixels nos lados */
+    font-size: 1em;
+    /* Tamanho da fonte é igual ao tamanho padrão */
+    margin: 8px 0;
+    /* Define margens superior e inferior de 8 pixels, margens laterais como 0 */
+    display: block;
+    /* Apresenta os elementos como blocos */
+    border: 1px solid #ccc;
+    /* Adiciona uma borda de 1 pixel sólida com a cor cinza */
+    border-radius: 4px;
+    /* Borda arredondada com raio de 4 pixels */
+    box-sizing: border-box;
+    /* Inclui o preenchimento e a borda no

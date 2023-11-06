@@ -5,6 +5,7 @@
 @section('content')
 
 
+
     <img id="logo" src="/img/laravell.png" alt="Brothers Learning">
 
     <p>
@@ -26,7 +27,7 @@
             @if ($aula->curso == 'laravel')
                 <div class="course-card">
                     <a href="/cursos/laravel/{{ $aula->id }}" class="course-link">
-                        <img src="/img/modelo5.png" alt="Logotipo do Brothers Learning" class="course-image">
+                        <img src="/img/laravell.png" alt="Logotipo do Brothers Learning" class="course-image">
                         <h5>{{ $aula->nomeaula }}</h5>
                         <div class="overlay">
 
