@@ -8,7 +8,7 @@
     <img id="logo" src="/img/mysql-logo.png" alt="Brothers Learning">
 
     <p>
-    <div class="container">
+    <div class="card">
         <a href="https://dev.mysql.com/doc/">Documentação Para Instalação</a>
     </div>
     </p>

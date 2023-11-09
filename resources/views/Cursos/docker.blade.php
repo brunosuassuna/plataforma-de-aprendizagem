@@ -8,7 +8,7 @@
 <img id="logo" src="/img/doocker.png" alt="Brothers Learning">
 
 <p>
-    <div class="container">
+    <div class="card">
         <a href="https://docs.docker.com/desktop/">Documentação Para Instalação</a>
     </div>
     </p>

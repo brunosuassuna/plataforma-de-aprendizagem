@@ -183,3 +183,6 @@ class CursosController extends Controller
         return view('dashboard',['aulas' => $aulas]);
     }
 }
+
+
+

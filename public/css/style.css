@@ -238,6 +238,8 @@ body {
     background-color: #F0FFFF; /* Alterado para um tom mais claro */
     margin: 0;
     padding: 0;
+
+
 }
 
 /* Layout Principal */
@@ -284,7 +286,7 @@ button {
     padding: 12px 24px; /* Aumenta um pouco o preenchimento */
     border: none;
     border-radius: 6px;
-    background-color: #4caf50;
+    background-color: #4a90e2;
     color: #fff;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -293,11 +295,11 @@ button {
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.3s;
-    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.2); /* Adiciona uma leve sombra */
+    box-shadow: 0 4px 10px #4a90e2; /* Adiciona uma leve sombra */
 }
 
 button:hover {
-    background-color: #43a047; /* Tonalidade um pouco mais escura ao passar o mouse */
+    background-color: #4a90e2; /* Tonalidade um pouco mais escura ao passar o mouse */
 }
 
 /* Elementos Específicos */
@@ -374,6 +376,7 @@ justify-content: center;
     margin-top: auto;
     margin-bottom: auto;
     padding: 5px;
+
 }
 
 /* Sobreposição que aparece quando o mouse passa sobre o cartão */
@@ -450,53 +453,99 @@ max-width: 700px;
 /* Adiciona um preenchimento interno de 20 pixels para o conteúdo dentro do elemento */
 padding: 20px;
 
+
 }
 
 header {
-/* Define a cor do texto como um tom de cinza (#DCDCDC) */
-color: #DCDCDC;
-
-/* Adiciona um preenchimento interno de 10 pixels para o conteúdo dentro do elemento */
-padding: 10px;
-
-/* Define a largura do elemento como 100% da largura da janela (viewport width) */
-width: 97.3vw;
-
-/* Define o elemento como um bloco de formatação de fluxo raiz (root) */
-display: flow-root;
-
-/* Define a cor de fundo do elemento como branca */
-background-color: white;
-
-/* Centraliza o texto dentro do elemento */
-text-align: center;
-
-/* Define a margem superior automática para posicionar o elemento no rodapé */
-margin-top: auto;
-
-/* Define uma margem à direita do elemento de 10 pixels */
-margin-right: 10px;
-
-/* Centraliza o conteúdo horizontalmente dentro do elemento */
-justify-content: center;
-
-height: 50px;
-max-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 100vw;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
 }
 
-.container {
+/* Estilização para o logotipo */
+header .logo {
+    width: 100px;
+    height: auto;
+}
+
+/* Estilização para a barra de navegação */
+header nav ul {
+    list-style: none;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    padding: 0;
+    margin: 0;
 
-    padding: 30px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
     color: #333;
-    align-items: center; /* Alinha os itens verticalmente */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
 
+header nav ul li a:hover {
+    color: #4a90e2;
+}
+
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#event-create-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.event-form {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    width: 100%;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #4a90e2;
+    color: #fff;
+}
+
+.btn-danger {
+    background-color: #e24a4a;
+    color: white;
 }
 
 header a {
@@ -504,6 +553,7 @@ header a {
     margin-top: /* valor desejado */; /* Adiciona margem no topo */
     margin-bottom: /* valor desejado */; /* Adiciona margem na parte inferior */
     margin-top: 20px;
+
 }
 
 .logout {
@@ -550,49 +600,67 @@ display: inline;
 /* Define uma margem à esquerda do elemento de 20 pixels.
    No entanto, 'flex-direction' não se aplica a elementos 'display: inline', por isso pode não afetar diretamente a direção dos elementos. */
 margin-left: 20px;
+
 }
 
 
 main,
 section {
-/* Define as margens superior e inferior como 0 e alinha automaticamente as margens laterais */
-margin: 20px auto;
-
-/* Define a largura do elemento como 70% do seu contêiner */
-width: 80%;
-
-/* Define a cor de fundo do elemento como branca */
-background-color: white;
-
-/* Define um preenchimento interno de 15 pixels para o conteúdo dentro do elemento */
-
-/* Define uma margem inferior de 20 pixels para dar espaço entre os elementos */
-margin-bottom: 20px;
-
-/* Define o raio do canto do elemento como 10 pixels para suavizar os cantos */
-border-radius: 10px;
-
-/* Adiciona uma sombra ao elemento com um deslocamento de 0 pixels na horizontal, 0 pixels na vertical e um desfoque de 20 pixels, utilizando uma cor de sombra preta com 50.2% de opacidade */
-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.502);
-
-text-align: center;
-
-min-height: 400px;
+    margin: 20px auto;
+    width: 80%;
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    min-height: 350px;
 
 }
+
+/* Estilização para títulos dentro do main/section */
+main h1,
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilização para parágrafos dentro do main/section */
+main p,
+section p {
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Estilização para links dentro do main/section */
+main a,
+section a {
+    color: #4a90e2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+main a:hover,
+section a:hover {
+    color: #357dbf;
+}
+
 
 footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: #0c0c0d;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: ;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
+
+
 }
 
 footer .nav-links {
@@ -632,43 +700,28 @@ footer .logo {
     }
 }
 
-h2,
-h3,
-h4 {
-/* Define a cor do texto como um tom de preto ligeiramente mais escuro (#0f0f0f) */
-color: #0f0f0f;
-
-/* Define as margens do elemento:
-   0 no topo, 0 à direita, 10 pixels na parte inferior e 0 à esquerda */
-margin: 0 0 10px 0;
-
+/* Estilização para títulos h2, h3, h4 */
+h2, h3, h4 {
+    color: #333; /* Tom de cinza escuro para textos */
+    margin-bottom: 15px; /* Espaço maior entre os títulos */
+    font-weight: bold; /* Texto em negrito */
 }
 
+/* Estilização para links */
 a {
-   /* Define a cor do texto como um tom de roxo escuro (#15142b) */
-color: #15142b;
-
-/* Define o preenchimento interno do elemento:
-   0 para o topo/fundo e 3 pixels para a direita/esquerda */
-padding: 0 3px;
-
-/* Define o peso da fonte como 600 (considerado semi-negrito) */
-font-weight: 600;
-
-/* Remove a decoração do link (sublinhado por padrão) */
-text-decoration: none;
-
+    color: #4a90e2; /* Cor azul para os links */
+    padding: 3px 8px; /* Preenchimento interno menor */
+    font-weight: 500; /* Texto com peso médio */
+    text-decoration: none; /* Sem sublinhado por padrão */
+    border-bottom: 2px solid transparent; /* Adiciona borda inferior */
+    transition: border-color 0.3s ease, color 0.3s ease; /* Transição suave de cores e borda */
 }
 
 a:hover {
-    /* Define a cor do texto como preto (#000000) */
-color: #000000;
-
-/* Adiciona uma borda na parte inferior do elemento:
-   1 pixel de espessura, sólida e com cor preta (#000000) */
-border-bottom: 1px solid #000000;
-
+    color: #15142b; /* Cor roxa escura quando hover */
+    border-bottom-color: #15142b; /* Borda inferior roxa ao passar o mouse */
 }
+
 
 
 

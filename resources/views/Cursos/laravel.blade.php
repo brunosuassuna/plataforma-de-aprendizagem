@@ -9,7 +9,7 @@
     <img id="logo" src="/img/laravell.png" alt="Brothers Learning">
 
     <p>
-    <div class="container">
+    <div class="card">
         <a href="https://laravel.com/docs">Documentação Para Instalação</a>
     </div>
     </p>

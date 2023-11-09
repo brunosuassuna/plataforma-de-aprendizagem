@@ -43,6 +43,16 @@ Route::get('/aluno/areaaluno', [CursosController::class, 'areaaluno'] )->middlew
 
 Route::get('/dashboard', [CursosController::class, 'dashboard'] )->middleware('auth');
 
+Route::post('/apagar-aula', function (Request $request) {
+    $id_aula = $request->input('id_aula');
+
+    // Excluir a aula
+    DB::table('aulas')->where('id', $id_aula)->delete();
+
+    // Redirecionar o usuário para a página de aulas
+    return redirect('/aulas');
+});
+
 
 
 

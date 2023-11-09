@@ -10,7 +10,7 @@
     <img id="logo" src="/img/php.png" alt="Brothers Learning">
 
     <p>
-    <div class="container">
+    <div class="card">
         <a href="https://www.php.net/manual/pt_BR/faq.installation.php">Documentação Para Instalação</a>
     </div>
     </p>
