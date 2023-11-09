@@ -40,7 +40,8 @@ Route::post('/professor', [ProfessorController::class, 'store2'] );
 
 Route::get('/professor/avaliacao', [CursosController::class, 'avaliacao'] )->middleware('auth');
 Route::get('/aluno/areaaluno', [CursosController::class, 'areaaluno'] )->middleware('auth');
-Route::get('/contato/areacontato', [CursosController::class, 'areacontato'] );
+
+Route::get('/dashboard', [CursosController::class, 'dashboard'] )->middleware('auth');
 
 
 

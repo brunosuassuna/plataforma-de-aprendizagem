@@ -4,7 +4,7 @@
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
-                <img style="width: 60px;" id="logo" src="/img/modelo5.jpeg" alt="Brothers Learning"> <!-- Logo do site -->
+                <img style="width: 60px;" id="logo" src="/img/bl.png" alt="Brothers Learning"> <!-- Logo do site -->
 
                 <!-- Navigation Links -->
 

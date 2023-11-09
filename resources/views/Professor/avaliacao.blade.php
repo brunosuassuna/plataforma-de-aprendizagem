@@ -9,10 +9,8 @@
     </head>
 
     <body>
-        <header>
             <h1>Página De Avaliação Do Professor</h1>
-        </header>
-        <main>
+            <div class="avaliacoes-container">
             <section class="avaliacoes">
                 <h2>Avaliações Criadas</h2>
                 <table class="table table-striped">
@@ -79,12 +77,14 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="conteudo">Conteúdo</label>
-                        <textarea name="conteudo" id="conteudo" required></textarea>
+                        <label for="conteudo" class="form-label">Conteúdo</label>
+                        <div class="custom-textarea">
+                            <textarea name="conteudo" id="conteudo" required minlength="10" maxlength="2000" class="form-control"></textarea>
+                        </div>
                     </div>
-                    <button type="submit">Criar avaliação</button>
+                    <button type="submit" class="btn btn-primary" style="padding: 10px 20px; border: none; border-radius: 5px; background-color: #4a90e2; color: #fff; cursor: pointer;">Criar</button>
                 </form>
             </section>
-        </main>
+        </div>
     </body>
 @endsection

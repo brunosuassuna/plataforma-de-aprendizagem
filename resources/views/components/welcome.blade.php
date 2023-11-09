@@ -6,7 +6,7 @@
 
 
 
-    <img id="logo" src="/img/modelo5.jpeg" alt="Brothers Learning"> <!-- Logo do site -->
+    <img id="logo" src="/img/bl.png" alt="Brothers Learning"> <!-- Logo do site -->
     <h1 class="mt-8 text-2xl font-medium text-gray-900">
         Bem-vindo à Brothers Learning!
     </h1>

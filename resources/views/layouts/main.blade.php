@@ -17,14 +17,14 @@
         integrity="sha384-ka7Sk0Gln4gmtzJLQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="/js/scripts.js"></script>
 
-    <link rel="icon" href="/img/modelo5.jpeg" type="image/x-icon"> <!-- Ícone da página -->
+    <link rel="icon" href="/img/bl-icon.png" type="image/x-icon "> <!-- Ícone da página -->
 </head>
 
 <body>
 
   <header class="container">
-        <a href="/" class="navbar-brand">
-            <img id="logo" src="/img/modelo5.jpeg" alt="Brothers Learning"> <!-- Logo do site -->
+        <a href="/" class="logo-header">
+            <img id="logo" src="/img/bl.png" alt="Brothers Learning"> <!-- Logo do site -->
         </a>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="collapse navbar-collapse" id="navbar">
@@ -37,10 +37,10 @@
                     <li class="nav-item">
                         <a href="/dashboard" class="card">Dashboard</a>
                     </li>
-                    
+
                     @auth <!-- Se o usuário estiver autenticado -->
                         <li class="nav-item">
-                            <form action="/logout" method="POST">
+                            <form class="logout" action="/logout" method="POST">
                                 @csrf <!-- Token CSRF para segurança -->
                                 <a href="/logout" class="nav-link"
                                     onclick="event.preventDefault();  this.closest('form').submit();">

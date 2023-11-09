@@ -1,8 +1,9 @@
 <x-guest-layout>
+
     <x-authentication-card>
         <x-slot name="logo">
             <a href="/">
-            <img style="width: 150px;" id="logo" src="/img/modelo5.jpeg" alt="Brothers Learning"> <!-- Logo do site -->
+            <img style="width: 150px;" id="logo" src="/img/bl.png" alt="Brothers Learning"> <!-- Logo do site -->
             </a>
         </x-slot>
         <x-validation-errors class="mb-4" />

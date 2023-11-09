@@ -8,22 +8,22 @@ class AlunoController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth'); // Aplica o middleware 'auth' a todos os métodos do controlador
     }
 
     public function index()
     {
-        // O conteúdo da página do aluno
+        // Método para exibir o conteúdo da página do aluno
     }
 
     public function exibirFormularioSenha()
     {
-        return view('configurarSenha');
+        return view('configurarSenha'); // Retorna a view para configurar a senha
     }
 
     public function salvarSenha(Request $request)
     {
-        // Processar a configuração da senha aqui
+        // Método para processar a configuração da senha
+        // O código para processar e salvar a senha fornecida pelo formulário estaria aqui
     }
-    
 }

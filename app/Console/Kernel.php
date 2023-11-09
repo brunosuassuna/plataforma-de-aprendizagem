@@ -12,7 +12,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule): void
     {
-        // $schedule->command('inspire')->hourly();
+        // Define tarefas agendadas aqui usando o objeto Schedule
+        // Exemplo: $schedule->command('inspire')->hourly();
     }
 
     /**
@@ -20,8 +21,8 @@ class Kernel extends ConsoleKernel
      */
     protected function commands(): void
     {
-        $this->load(__DIR__.'/Commands');
+        $this->load(__DIR__.'/Commands'); // Carrega os comandos disponíveis na pasta 'Commands'
 
-        require base_path('routes/console.php');
+        require base_path('routes/console.php'); // Requisições adicionais para comandos da aplicação
     }
 }

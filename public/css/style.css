@@ -1,25 +1,32 @@
-/* Paleta de cores */
-:root {
-    --primary-color: #1d2435;
-    --secondary-color: #fff;
-}
-
-
 /* ESTILO DAS VIDEOAULAS */
 .aula-div {
-    margin-top: 20px;
+   /* Adiciona uma margem no topo do elemento de 20 pixels */
+margin-top: 20px;
+
 }
 
 .video-card video {
-    max-width: 100%;
-    max-height: 100%;
+/* Define a largura máxima do elemento como 100% da largura do contêiner */
+max-width: 100%;
+
+/* Define a altura máxima do elemento como 100% da altura do contêiner */
+max-height: 100%;
+
 }
 
 .video-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
+   /* Define o elemento como um contêiner flexível */
+display: flex;
+
+/* Centraliza os elementos filhos horizontalmente dentro do contêiner */
+justify-content: center;
+
+/* Centraliza os elementos filhos verticalmente dentro do contêiner */
+align-items: center;
+
+/* Define a altura do elemento como 500 pixels */
+height: 500px;
+
     /* Altura desejada para a div */
     border: 1px solid var(--primary-color);
     /* Adiciona uma borda de 1 pixel sólida com a cor #1d2435 à classe .video-card */
@@ -40,134 +47,216 @@
 }
 
 .conteudo-card p {
-    padding: 20px;
-    overflow: auto;
-    height: 100px;
-    font-size: 1.2em;
-    /* Aumenta o tamanho da fonte para 1.2 vezes o tamanho padrão */
-    aria-label: "Conteúdo da videoaula";
-    /* Fornece uma descrição do conteúdo */
-    text-align: center;
+/* Adiciona um preenchimento interno de 20 pixels para o conteúdo dentro do elemento */
+padding: 20px;
+
+/* Permite a rolagem interna (scroll) se o conteúdo ultrapassar as dimensões do contêiner */
+overflow: auto;
+
+/* Define a altura do elemento como 100 pixels */
+height: 100px;
+
+/* Define o tamanho da fonte como 1.2 vezes o tamanho padrão */
+font-size: 1.2em;
+/* Comentário: Aumenta o tamanho da fonte para 1.2 vezes o tamanho padrão */
+
+/* Fornece uma descrição do conteúdo para acessibilidade */
+aria-label: "Conteúdo da videoaula";
+
+/* Centraliza o texto dentro do elemento */
+text-align: center;
+
 }
 
 .comentarios-card {
-    border: 1px solid var(--primary-color);
-    /* Adiciona uma borda de 1 pixel sólida com a cor #1d2435 à classe .msg */
-    text-align: center;
-    /* Alinha o texto ao centro na classe .msg */
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 10px;
+/* Adiciona uma borda de 1 pixel sólida com a cor variável definida em --primary-color à classe .msg */
+border: 1px solid var(--primary-color);
+
+/* Alinha o texto ao centro na classe .msg */
+text-align: center;
+
+/* Adiciona um preenchimento de 20 pixels no topo da classe .msg */
+padding-top: 20px;
+
+/* Adiciona um preenchimento de 20 pixels na parte esquerda da classe .msg */
+padding-left: 20px;
+
+/* Adiciona um preenchimento de 20 pixels na parte direita da classe .msg */
+padding-right: 20px;
+
+/* Adiciona uma margem de 10 pixels no topo da classe .msg */
+margin-top: 10px;
+
+
 }
 
 .comentario-prof {
-    text-align: right;
+    /* Alinha o texto à direita */
+text-align: right  ! important ;
+
+
 }
 .comentario-aluno {
+    /* Alinha o texto à esquerda */
     text-align: left;
 }
 
 .comentario-aluno h5{
-    text-align: left;
-    font-size: 15px;
-    margin-top: -8px;
-    color: gray;
+/* Alinha o texto à esquerda */
+text-align: left;
+
+/* Define o tamanho da fonte como 15 pixels */
+font-size: 15px;
+
+/* Move o elemento 8 pixels para cima, em relação ao seu posicionamento original */
+margin-top: -8px;
+
+/* Define a cor do texto como cinza */
+color: gray;
+
 }
 .comentario-prof h5{
-    text-align: right;
-    font-size: 15px;
-    margin-top: -8px;
-    color: gray;
+/* Alinha o texto à direita dentro do elemento */
+text-align: right !important;
+display: flex
+
+/* Define o tamanho da fonte como 15 pixels */
+font-size: 15px;
+
+/* Move o elemento 8 pixels acima de sua posição original */
+margin-top: -8px;
+
+/* Define a cor do texto como cinza */
+color: gray;
+
 }
 .comentario-prof p {
-    background-color: rgb(225, 225, 225);
-    padding: 10px;
-    border-radius: 5px;
-    margin: 10px 0;
+/* Define a cor de fundo usando valores RGB (225, 225, 225), uma tonalidade de cinza claro */
+background-color: rgb(225, 225, 225);
+
+/* Adiciona um preenchimento interno de 10 pixels ao redor do conteúdo dentro do elemento */
+padding: 10px;
+
+/* Define o raio dos cantos do elemento como 5 pixels, suavizando os cantos */
+border-radius: 5px;
+
+/* Define as margens superior e inferior como 10 pixels e as laterais como 0 */
+margin: 10px 0;
+
+
 
 }
 .comentario-aluno p {
-    background-color: rgb(225, 225, 225);
-    padding: 10px;
-    border-radius: 5px;
-    margin: 10px 0;
+/* Define a cor de fundo usando valores RGB (225, 225, 225), representando um tom de cinza claro */
+background-color: rgb(225, 225, 225);
+
+/* Adiciona um preenchimento interno de 10 pixels ao redor do conteúdo dentro do elemento */
+padding: 10px;
+
+/* Define o raio dos cantos do elemento como 5 pixels, suavizando os cantos */
+border-radius: 5px;
+
+/* Define as margens superior e inferior como 10 pixels e as laterais como 0 */
+margin: 10px 0;
+
 
 }
 .prof-icon {
-    width: 50px;
-    padding-left: 10px;
-    float: right;
+/* Define a largura do elemento como 50 pixels */
+width: 50px;
+
+/* Adiciona um preenchimento interno de 10 pixels à esquerda do elemento */
+padding-left: 10px;
+
+/* Faz com que o elemento flutue para a direita */
+float: right;
+
+
 }
 .aluno-icon {
-    width: 50px;
-    padding-right: 10px;
+/* Define a largura do elemento como 50 pixels */
+width: 50px;
 
-    float: left;
+/* Adiciona um preenchimento interno de 10 pixels à direita do elemento */
+padding-right: 10px;
+
+/* Faz com que o elemento flutue para a esquerda */
+float: left;
+
 }
 
 
 
+/* Estilos da Tabela */
 table {
-    border-collapse: collapse;
-    width: 100%;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px; /* Espaçamento inferior para separação */
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
-th,
-td {
-    border: 1px solid #ccc;
-    padding: 8px;
+th, td {
+  border: 1px solid #e0e0e0;
+  padding: 12px;
+  text-align: left;
 }
 
 th {
-    background-color: #f0f0f0;
-    text-align: center;
+  background-color: #f5f5f5;
+  font-weight: bold;
 }
 
-td {
-    text-align: left;
+tr:nth-child(even) {
+  background-color: #f9f9f9; /* Suaviza a cor de fundo das linhas pares */
+  transition: background-color 0.3s ease;
 }
 
-.table-striped tr:nth-child(even) {
-    background-color: #f8f8f8;
+tr:hover {
+  background-color: #e8e8e8; /* Alteração sutil da cor ao passar o mouse */
 }
 
-.table-striped tr:hover {
-    background-color: #ddd;
+/* Efeito de Sombra e Destaque ao Passar o Mouse */
+table:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
+
 
 /* Reset de Estilos */
+/* É um formato amplamente utilizado e capaz de representar a maioria dos caracteres do mundo.*/
 @charset "UTF-8";
 
 
 
 /* Estilos Globais */
 body {
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #F0FFFF; /* Alterado para um tom mais claro */
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #DCDCDC !important;
-    /* Adicione !important para aumentar a prioridade */
 }
 
 /* Layout Principal */
-
-/* Seção */
 section {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra mais suave */
+    transition: box-shadow 0.3s ease; /* Adiciona transição à sombra */
+}
+
+section:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Sutil aumento da sombra ao passar o mouse */
 }
 
 section h2 {
     margin-top: 0;
 }
 
-/* Formulário */
 form {
     display: grid;
     gap: 10px;
@@ -185,24 +274,30 @@ form {
 .campo input,
 .campo textarea,
 .campo select {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 10px; /* Aumenta o preenchimento para uma sensação mais espaçosa */
+    border: 1px solid #e0e0e0; /* Suaviza a borda */
+    border-radius: 6px; /* Cantos mais arredondados */
 }
 
 button {
-    padding: 8px 16px;
+    display: inline-block;
+    padding: 12px 24px; /* Aumenta um pouco o preenchimento */
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     background-color: #4caf50;
-    color: white;
-    font-weight: bold;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
     cursor: pointer;
     transition: background-color 0.3s;
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.2); /* Adiciona uma leve sombra */
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #43a047; /* Tonalidade um pouco mais escura ao passar o mouse */
 }
 
 /* Elementos Específicos */
@@ -210,28 +305,38 @@ button:hover {
     width: 100px;
     display: flex;
     align-items: center;
-    /* Ajusta o alinhamento vertical se necessário */
-
 }
 
-
 .msg {
-    background-color: #D4EDDA;
+    background-color: #d4edda;
     color: #155724;
-    border: 1px solid #C3E6CB;
+    border: 1px solid #c3e6cb;
     width: 100%;
     margin-top: 0;
     text-align: center;
-    padding: 10px;
+    padding: 12px; /* Aumenta o preenchimento */
+    border-radius: 6px; /* Adiciona bordas mais arredondadas */
+    box-shadow: 0 2px 8px rgba(60, 118, 61, 0.15); /* Adiciona uma sombra sutil */
 }
+
+
 
 
 /*INTERFACE DOS CURSOS*/
 /* Define uma grade com duas colunas e um espaçamento entre as células de 20px */
 .course-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+/* Define o elemento como um layout de grade */
+display: flex;
+
+/* Cria duas colunas com larguras iguais dentro do layout de grade */
+grid-template-columns: repeat(2, 1fr);
+
+/* Define o espaçamento entre as células da grade como 20 pixels */
+gap: 20px;
+
+align-items: center;
+justify-content: center;
+
 }
 
 /* Estilo básico para cada cartão de curso */
@@ -246,6 +351,12 @@ button:hover {
     transition: transform 0.2s;
     /* Adiciona uma transição suave ao efeito de escala */
     text-align: center;
+    justify-content: center;
+    float: left;
+    display: block;
+    width: 250px;
+    height: 120px;
+
 }
 
 /* Quando o mouse passa sobre o cartão, ele aumenta ligeiramente de tamanho */
@@ -255,13 +366,14 @@ button:hover {
 
 /* Estilo para as imagens dos cursos */
 .course-image {
-    width: 20%;
+    width: 100px;
     height: auto;
     /* Mantém a proporção da imagem */
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
+    padding: 5px;
 }
 
 /* Sobreposição que aparece quando o mouse passa sobre o cartão */
@@ -296,6 +408,7 @@ button:hover {
     /* Tamanho da fonte do título */
     margin: 0;
     /* Remove as margens padrão para evitar espaçamento indesejado */
+    color: white;
 }
 
 /* Estilo para a descrição do curso */
@@ -315,6 +428,7 @@ button:hover {
     width: 48%;
     /* ajuste a largura conforme necessário */
     margin: 5px;
+
 }
 
 .course-card a {
@@ -330,219 +444,305 @@ button:hover {
 
 section,
 article {
-    max-width: 700px;
-    padding: 20px;
+/* Define a largura máxima do elemento como 700 pixels */
+max-width: 700px;
+
+/* Adiciona um preenchimento interno de 20 pixels para o conteúdo dentro do elemento */
+padding: 20px;
+
 }
 
 header {
-    color: #DCDCDC;
-    padding: 10px;
-    width: 100vw;
-    display: flow-root;
+/* Define a cor do texto como um tom de cinza (#DCDCDC) */
+color: #DCDCDC;
 
+/* Adiciona um preenchimento interno de 10 pixels para o conteúdo dentro do elemento */
+padding: 10px;
 
-    background-color: white;
+/* Define a largura do elemento como 100% da largura da janela (viewport width) */
+width: 97.3vw;
 
-    text-align: center;
-    margin-top: auto;
-    padding: 10px;
-    margin-right: 10px;
-    justify-content: center;
+/* Define o elemento como um bloco de formatação de fluxo raiz (root) */
+display: flow-root;
 
-}
+/* Define a cor de fundo do elemento como branca */
+background-color: white;
 
-nav {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: row;
-}
-nav ul {
-    list-style: none;
-}
+/* Centraliza o texto dentro do elemento */
+text-align: center;
 
-nav ul li {
-    display: inline;
-    flex-direction: row;
-    margin-left: 20px;
+/* Define a margem superior automática para posicionar o elemento no rodapé */
+margin-top: auto;
+
+/* Define uma margem à direita do elemento de 10 pixels */
+margin-right: 10px;
+
+/* Centraliza o conteúdo horizontalmente dentro do elemento */
+justify-content: center;
+
+height: 50px;
+max-width: 100vw;
+
 }
 
 .container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 15px 0;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    justify-content: center;
+
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    color: #333;
+    align-items: center; /* Alinha os itens verticalmente */
+
+}
+
+header a {
+    display: inline-block; /* Transforma os links em elementos de bloco para aplicar o alinhamento */
+    margin-top: /* valor desejado */; /* Adiciona margem no topo */
+    margin-bottom: /* valor desejado */; /* Adiciona margem na parte inferior */
+    margin-top: 20px;
+}
+
+.logout {
+    display: flex;
+    float: inline-end;
+    width: 20px !important;
+    background-color: transparent;
+    padding: 0px;
+    display: block; /* Transforma os links em elementos de bloco para ocupar todo o espaço disponível */
+    margin-top: 0px;
+}
+
+.logo-header {
+    display: block; /* Torna a imagem um bloco */
+    margin-top: 0; /* Alinha ao topo */
+}
+
+nav {
+/* Define uma margem inferior de 20 pixels para o elemento */
+margin-bottom: 20px;
+
+/* Define o elemento como um contêiner flexível */
+display: flex;
+
+/* Define a direção dos elementos filhos como em linha (horizontal) */
+flex-direction: row;
+
+}
+nav ul {
+/* Remove os marcadores de lista (bullets) em elementos de lista */
+list-style: none;
+
+}
+
+nav ul li {
+/* Define o elemento como um nível de exibição 'inline' */
+display: inline;
+
+/* A propriedade 'flex-direction' não se aplica a elementos com 'display: inline'.
+   Esta propriedade é usada para elementos com 'display: flex'.
+   Se o elemento é 'inline', a direção dos elementos filhos é determinada pelo contexto e fluxo normal da página. */
+/* flex-direction: row; */
+
+/* Define uma margem à esquerda do elemento de 20 pixels.
+   No entanto, 'flex-direction' não se aplica a elementos 'display: inline', por isso pode não afetar diretamente a direção dos elementos. */
+margin-left: 20px;
 }
 
 
-
 main,
-section,
-article {
-    margin: 0 auto;
-    width: 70%;
-    background-color: white;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.502);
+section {
+/* Define as margens superior e inferior como 0 e alinha automaticamente as margens laterais */
+margin: 20px auto;
+
+/* Define a largura do elemento como 70% do seu contêiner */
+width: 80%;
+
+/* Define a cor de fundo do elemento como branca */
+background-color: white;
+
+/* Define um preenchimento interno de 15 pixels para o conteúdo dentro do elemento */
+
+/* Define uma margem inferior de 20 pixels para dar espaço entre os elementos */
+margin-bottom: 20px;
+
+/* Define o raio do canto do elemento como 10 pixels para suavizar os cantos */
+border-radius: 10px;
+
+/* Adiciona uma sombra ao elemento com um deslocamento de 0 pixels na horizontal, 0 pixels na vertical e um desfoque de 20 pixels, utilizando uma cor de sombra preta com 50.2% de opacidade */
+box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.502);
+
+text-align: center;
+
+min-height: 400px;
+
 }
 
 footer {
     display: flex;
     flex-direction: row;
-    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
     background-color: #0c0c0d;
     color: white;
     text-align: center;
-    margin-top: auto;
-    padding: 10px;
-    margin-right: 10px;
-    justify-content: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-p {
+footer .nav-links {
+    display: flex;
+}
+
+footer .nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer .nav-links a:hover {
+    color: #a9a9a9;
+}
+
+footer p {
     text-align: justify;
-    line-height: 1.5em;
+    line-height: 1.6;
+}
+
+footer .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .nav-links {
+        margin-top: 15px;
+    }
 }
 
 h2,
 h3,
 h4 {
-    color: #0f0f0f;
-    margin: 0 0 10px 0;
+/* Define a cor do texto como um tom de preto ligeiramente mais escuro (#0f0f0f) */
+color: #0f0f0f;
+
+/* Define as margens do elemento:
+   0 no topo, 0 à direita, 10 pixels na parte inferior e 0 à esquerda */
+margin: 0 0 10px 0;
+
 }
 
 a {
-    color: #15142b;
-    padding: 0 3px;
-    font-weight: 600;
-    text-decoration: none;
+   /* Define a cor do texto como um tom de roxo escuro (#15142b) */
+color: #15142b;
+
+/* Define o preenchimento interno do elemento:
+   0 para o topo/fundo e 3 pixels para a direita/esquerda */
+padding: 0 3px;
+
+/* Define o peso da fonte como 600 (considerado semi-negrito) */
+font-weight: 600;
+
+/* Remove a decoração do link (sublinhado por padrão) */
+text-decoration: none;
+
 }
 
 a:hover {
-    color: #000000;
-    border-bottom: 1px solid #000000;
+    /* Define a cor do texto como preto (#000000) */
+color: #000000;
+
+/* Adiciona uma borda na parte inferior do elemento:
+   1 pixel de espessura, sólida e com cor preta (#000000) */
+border-bottom: 1px solid #000000;
+
 }
 
 
 
-footer a {
-    tabindex: 0;
-}
+
 
 /* TABELAS E LISTAS */
 
 table {
     min-width: 400px;
-    /* Define a largura mínima da tabela como 400 pixels */
     border-spacing: 0px;
-    /* Remove o espaçamento entre as células da tabela */
-    border: 0.5px solid #000000;
-    /* Adiciona uma borda de 0.5 pixels sólida com cor preta */
+    border: 1px solid #000000;
     margin: 10px auto;
-    /* Margens de 10 pixels nas laterais e centraliza a tabela horizontalmente */
+
+    @media (min-width: 768px) {
+        width: 100%;
+    }
+}
+
+table.table-responsive {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+table.table-bordered {
+    border: 1px solid #000000;
+}
+
+table.table-striped {
+    tr:nth-child(even) {
+        background-color: #f5f5f5;
+    }
 }
 
 table th {
     background-color: #090909;
-    /* Cor de fundo para os cabeçalhos (th) da tabela */
     color: white;
-    /* Cor do texto para os cabeçalhos */
     padding: 5px;
-    /* Preenchimento interno de 5 pixels nos cabeçalhos */
     text-align: left;
-    /* Alinha o texto dos cabeçalhos à esquerda */
+    font-size: 1.2em;
 }
 
 table td {
     padding: 5px;
-    /* Preenchimento interno de 5 pixels nas células (td) da tabela */
+    font-size: 1em;
 }
-
-table tr {
-    background-color: rgba(55, 41, 145, 0.05);
-    /* Cor de fundo padrão para as linhas da tabela */
-}
-
-table tr:nth-child(odd) {
-    background-color: rgba(55, 41, 145, 0.3);
-    /* Cor de fundo alternada para linhas ímpares da tabela */
-}
-
-table.divisao {
-    border: 1px solid white;
-    /* Adiciona uma borda de 1 pixel sólida com a cor branca para a tabela com classe divisao */
-}
-
-table.divisao td {
-    background-color: white;
-    /* Cor de fundo para as células da tabela com classe divisao */
-    padding: 20px;
-    /* Preenchimento interno de 20 pixels nas células da tabela com classe divisao */
-    text-align: center;
-    /* Alinha o texto das células ao centro na tabela com classe divisao */
-    font-size: 2.5em;
-    /* Define o tamanho da fonte como 2.5 vezes o tamanho padrão na tabela com classe divisao */
-}
-
-table.divisao tr:nth-child(1) td:nth-child(2) {
-    border-bottom: 3px solid black;
-    /* Adiciona uma borda inferior de 3 pixels sólida com a cor preta na célula específica da tabela com classe divisao */
-    border-left: 3px solid black;
-    /* Adiciona uma borda à esquerda de 3 pixels sólida com a cor preta na célula específica da tabela com classe divisao */
-}
-
-table.divisao tr:nth-child(2) td:nth-child(2) {
-    border-left: 3px solid black;
-    /* Adiciona uma borda à esquerda de 3 pixels sólida com a cor preta na célula específica da tabela com classe divisao */
-}
-
-table.divisao tr:nth-child(2) td:nth-child(1) {
-    text-decoration: underline;
-    /* Sublinha o texto na célula específica da tabela com classe divisao */
-}
-
-ul>li::marker {
-    color: #372991;
-    /* Define a cor dos marcadores para listas não ordenadas */
-}
-
 /* ELEMENTOS DE FORMULÁRIO */
 
-form {
-    background-color: #f8f8f8;
-    /* Cor de fundo mais escura */
+/* Estilo do rótulo */
+.form-label {
+    font-weight: bold;
     color: #333;
-    /* Cor do texto mais escura */
-    display: flex;
-    flex-direction: column;
-    min-width: 400px;
-    padding: 15px;
-    border-radius: 10px;
+    display: block;
+    margin-bottom: 5px;
 }
 
-form label {
-    display: block;
-    /* Define o elemento como bloco, ocupando toda a largura disponível */
-    width: fit-content;
-    /* A largura se ajusta ao conteúdo interno, não se estende mais do que o necessário */
-    font-size: 0.8em;
-    /* Tamanho da fonte 0.8 vezes o tamanho padrão */
-    font-weight: 100;
-    /* Peso da fonte mais leve */
-    background-color: rgba(55, 41, 145, 0.2);
-    /* Cor de fundo com canal alfa (transparência) */
-    padding: 3px 7px;
-    /* Preenchimento interno de 3 pixels no topo e na base, 7 pixels nos lados */
-    margin-top: 10px;
-    /* Margem superior de 10 pixels */
-    margin-bottom: 0px;
-    /* Sem margem inferior */
+/* Estilo do campo de texto */
+.custom-textarea {
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
     border-radius: 5px;
-    /* Borda arredondada com raio de 5 pixels */
+    padding: 10px;
+}
+
+.custom-textarea textarea {
+    width: 100%;
+    height: 150px;
+    border: none;
+    outline: none;
+    resize: none;
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #333;
 }
 
 input[type=text],
@@ -573,4 +773,15 @@ input[type=week] {
     border-radius: 4px;
     /* Borda arredondada com raio de 4 pixels */
     box-sizing: border-box;
-    /* Inclui o preenchimento e a borda no
+    /* Inclui o preenchimento e a borda no*/
+}
+
+/* AVALIACOES */
+
+.avaliacoes-container {
+    display: flex;
+}
+
+.avaliacoes-container section {
+    margin: 5px;
+}

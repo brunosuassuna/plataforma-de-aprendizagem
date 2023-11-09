@@ -24,7 +24,8 @@ class Handler extends ExceptionHandler
     public function register(): void
     {
         $this->reportable(function (Throwable $e) {
-            //
+            // Lida com exceções não capturadas e reporta-as, se necessário
+            // Você pode adicionar ações específicas para lidar com diferentes tipos de exceções aqui
         });
     }
 }

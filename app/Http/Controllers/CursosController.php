@@ -175,4 +175,11 @@ class CursosController extends Controller
         ]);
     }
 
+
+    public function dashboard() {
+
+        $user = auth()->user();
+        $aulas = $user->aulas;
+        return view('dashboard',['aulas' => $aulas]);
+    }
 }
