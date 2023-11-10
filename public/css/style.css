@@ -185,42 +185,16 @@ float: left;
 
 }
 
+.icon {
+    width: 20px;
+    color: white;
+
+}
+
+
 
 
 /* Estilos da Tabela */
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin-bottom: 20px; /* Espaçamento inferior para separação */
-  background-color: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
-th, td {
-  border: 1px solid #e0e0e0;
-  padding: 12px;
-  text-align: left;
-}
-
-th {
-  background-color: #f5f5f5;
-  font-weight: bold;
-}
-
-tr:nth-child(even) {
-  background-color: #f9f9f9; /* Suaviza a cor de fundo das linhas pares */
-  transition: background-color 0.3s ease;
-}
-
-tr:hover {
-  background-color: #e8e8e8; /* Alteração sutil da cor ao passar o mouse */
-}
-
-/* Efeito de Sombra e Destaque ao Passar o Mouse */
-table:hover {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
 
 
 /* Reset de Estilos */
@@ -238,8 +212,8 @@ body {
     background-color: #F0FFFF; /* Alterado para um tom mais claro */
     margin: 0;
     padding: 0;
-
-
+    min-height: 100vh
+    flex-direction: column;
 }
 
 /* Layout Principal */
@@ -296,11 +270,14 @@ button {
     cursor: pointer;
     transition: background-color 0.3s;
     box-shadow: 0 4px 10px #4a90e2; /* Adiciona uma leve sombra */
+    align-content: center;
 }
 
 button:hover {
     background-color: #4a90e2; /* Tonalidade um pouco mais escura ao passar o mouse */
 }
+
+
 
 /* Elementos Específicos */
 #logo {
@@ -339,6 +316,21 @@ gap: 20px;
 align-items: center;
 justify-content: center;
 
+}
+
+.welcome-container {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.course-cards-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 20px auto;
+    height: 40vh;
 }
 
 /* Estilo básico para cada cartão de curso */
@@ -460,7 +452,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 50px;
+    height: 8vh;
     padding: 0 20px;
     width: 100%;
     max-width: 100vw;
@@ -503,7 +495,7 @@ header nav ul li a:hover {
 
 
 .container {
-    max-width: 960px;
+    max-width: 1495px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -600,7 +592,6 @@ display: inline;
 /* Define uma margem à esquerda do elemento de 20 pixels.
    No entanto, 'flex-direction' não se aplica a elementos 'display: inline', por isso pode não afetar diretamente a direção dos elementos. */
 margin-left: 20px;
-
 }
 
 
@@ -609,19 +600,18 @@ section {
     margin: 20px auto;
     width: 80%;
     background-color: #f5f5f5;
-    padding: 20px;
+    padding: 15px;
     margin-bottom: 20px;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     text-align: left;
-    min-height: 350px;
-
+    min-height: 72vh;
 }
 
 /* Estilização para títulos dentro do main/section */
 main h1,
 section h2 {
-    text-align: center;
+    text-align: left;
     margin-bottom: 20px;
     color: #333;
 }
@@ -647,7 +637,7 @@ section a:hover {
 }
 
 
-footer {
+#site-footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -655,13 +645,14 @@ footer {
     background-color: #0c0c0d;
     color: white;
     text-align: center;
-    padding: ;
-    position: fixed;
-    bottom: 0;
     width: 100vw;
-
+    height: 5vh;
+    transition: visibility 0s, opacity 0.5s linear;
 
 }
+
+
+
 
 footer .nav-links {
     display: flex;
@@ -722,51 +713,55 @@ a:hover {
     border-bottom-color: #15142b; /* Borda inferior roxa ao passar o mouse */
 }
 
-
-
-
-
-
 /* TABELAS E LISTAS */
 
-table {
-    min-width: 400px;
-    border-spacing: 0px;
-    border: 1px solid #000000;
-    margin: 10px auto;
-
-    @media (min-width: 768px) {
-        width: 100%;
-    }
-}
-
-table.table-responsive {
+.table {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin-top: 20px;
+    border-collapse: collapse;
 }
 
-table.table-bordered {
-    border: 1px solid #000000;
+.table th,
+.table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center; /* Centraliza o texto nas células */
 }
 
-table.table-striped {
-    tr:nth-child(even) {
-        background-color: #f5f5f5;
-    }
+.table th {
+    background-color: #3498db;
+    color: #fff;
+
 }
 
-table th {
-    background-color: #090909;
-    color: white;
-    padding: 5px;
-    text-align: left;
-    font-size: 1.2em;
+.no-aulas {
+    margin-top: 20px;
+    font-style: italic;
+    text-align: center; /* Centraliza o texto */
 }
 
-table td {
-    padding: 5px;
-    font-size: 1em;
+.delete {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem dentro do botão */
+}
+
+.caixa {
+    width: 20px;
+}
+
+#tabela-aulas{
+
+    width: 70%;
 }
 /* ELEMENTOS DE FORMULÁRIO */
 
@@ -838,3 +833,4 @@ input[type=week] {
 .avaliacoes-container section {
     margin: 5px;
 }
+

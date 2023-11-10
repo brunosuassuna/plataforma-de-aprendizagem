@@ -8,12 +8,18 @@ use App\Models\User;
 use App\Models\Aula;
 use App\Models\Avaliacao;
 use App\Models\Comentario;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Auth;
 
 class CursosController extends Controller
 {
     public function index()
     {
         return view('welcome');
+    }
+    public function dashboard()
+    {
+        return view('dashboard');
     }
 
     public function nossoscursos()
@@ -22,7 +28,8 @@ class CursosController extends Controller
     }
     public function create()
     {
-        return view('cursos.create');
+        $user = Auth::id();
+        return view('cursos.create', ['user' => $user] );
     }
     public function php()
     {
@@ -77,7 +84,7 @@ class CursosController extends Controller
         $aula->nomeaula = $request->nomeaula;
         $aula->conteudo = $request->conteudo;
         $aula->curso = $request->curso;
-
+        $aula->user_id = $request->id;
         // Verifique se um arquivo de vídeo foi enviado
         if ($request->hasFile('videoaula') && $request->file('videoaula')->isValid()) {
 
@@ -155,12 +162,10 @@ class CursosController extends Controller
     public function show($id)
     {
         $aula = Aula::findOrFail($id);
-
         $c = Comentario::find($id);
         if ($c === null) {
             $c = new Comentario(); // Se não encontrou, cria um novo Comentario vazio
         }
-
         $comentarios = Comentario::all();
         $users = User::all();
         $autorComentario = ($c->user_id) ? User::where('id', $c->user_id)->first()->toArray() : null;
@@ -174,15 +179,26 @@ class CursosController extends Controller
             'semComentario' => $semComentario
         ]);
     }
+    public function user(){
+        return $this->belongsTo('App\Models\User');
+    }
 
 
-    public function dashboard() {
+    public function aulas() {
 
         $user = auth()->user();
         $aulas = $user->aulas;
-        return view('dashboard',['aulas' => $aulas]);
+        return view('professor.aulas',['aulas' => $aulas]);
+    }
+
+    public function destroy($id) {
+
+        Aula::findOrFail($id)->delete();
+
+        return redirect('/professor/aulas')->with('msg','Aula Excluída com Sucesso!');
     }
 }
+
 
 
 

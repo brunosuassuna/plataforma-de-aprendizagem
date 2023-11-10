@@ -32,8 +32,13 @@ Route::get('/cursos/php/{id}', [CursosController::class, 'show'] )->middleware('
 Route::get('/cursos/laravel/{id}', [CursosController::class, 'show'] )->middleware('auth');
 Route::get('/cursos/mysql/{id}', [CursosController::class, 'show'] )->middleware('auth');
 Route::get('/cursos/docker/{id}', [CursosController::class, 'show'] )->middleware('auth');
+Route::delete('/cursos/mysql/{id}', [CursosController::class, 'destroy'] )->middleware('auth');
+Route::delete('/cursos/laravel/{id}', [CursosController::class, 'destroy'] )->middleware('auth');
+Route::delete('/cursos/docker/{id}', [CursosController::class, 'destroy'] )->middleware('auth');
+Route::delete('/cursos/php/{id}', [CursosController::class, 'destroy'] )->middleware('auth');
 
 Route::get('/professor/areaprofessor', [CursosController::class, 'areaprofessor'])->middleware('auth');
+Route::get('/professor/aulas', [CursosController::class, 'aulas'])->middleware('auth');
 
 Route::post('/professor', [ProfessorController::class, 'store2'] );
 
@@ -42,6 +47,7 @@ Route::get('/professor/avaliacao', [CursosController::class, 'avaliacao'] )->mid
 Route::get('/aluno/areaaluno', [CursosController::class, 'areaaluno'] )->middleware('auth');
 
 Route::get('/dashboard', [CursosController::class, 'dashboard'] )->middleware('auth');
+
 
 Route::post('/apagar-aula', function (Request $request) {
     $id_aula = $request->input('id_aula');
@@ -59,30 +65,5 @@ Route::post('/apagar-aula', function (Request $request) {
 
 
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
 
-/*
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-])->group(function () {
-    if (auth()->user()->professor == '0') {
-    Route::get('/welcome', function () {
-        return view('welcome');
-    })->name('welcome');
-}else{
-    Route::get('/professor/areaprofessor', function () {
-        return view('professor.areaprofessor');
-    })->name('areaprofessor');
-}
-});
-*/
+

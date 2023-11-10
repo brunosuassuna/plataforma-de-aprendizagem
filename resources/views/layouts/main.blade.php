@@ -15,7 +15,7 @@
     <!-- Scripts para funcionalidades JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtzJLQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="/js/scripts.js"></script>
+    <script src="/js/app.js"></script>
 
     <link rel="icon" href="/img/bl-icon.png" type="image/x-icon "> <!-- Ícone da página -->
 </head>
@@ -77,7 +77,7 @@
         </div>
     </main>
 
-    <footer class="d-flex flex-row justify-content-center">
+    <footer class="d-flex flex-row justify-content-center" id="site-footer">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <ul class="navbar-nav">
