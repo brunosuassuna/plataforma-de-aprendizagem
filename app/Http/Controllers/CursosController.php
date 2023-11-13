@@ -29,7 +29,7 @@ class CursosController extends Controller
     public function create()
     {
         $user = Auth::id();
-        return view('cursos.create', ['user' => $user] );
+        return view('cursos.create', ['user' => $user]);
     }
     public function php()
     {
@@ -114,8 +114,7 @@ class CursosController extends Controller
         $comentario->save();
 
 
-        return redirect('/cursos/php')->with('msg', 'Comentário enviado');
-
+        return back()->with('msg', 'Comentário enviado');
     }
     public function store4(Request $request)
     {
@@ -128,8 +127,7 @@ class CursosController extends Controller
         $comentario->save();
 
 
-        return redirect('/cursos/laravel')->with('msg', 'Comentário enviado');
-
+        return back()->with('msg', 'Comentário enviado');
     }
     public function store5(Request $request)
     {
@@ -142,8 +140,7 @@ class CursosController extends Controller
         $comentario->save();
 
 
-        return redirect('/cursos/mysql')->with('msg', 'Comentário enviado');
-
+        return back()->with('msg', 'Comentário enviado');
     }
     public function store6(Request $request)
     {
@@ -156,8 +153,7 @@ class CursosController extends Controller
         $comentario->save();
 
 
-        return redirect('/cursos/docker')->with('msg', 'Comentário enviado');
-
+        return back()->with('msg', 'Comentário enviado');
     }
     public function show($id)
     {
@@ -179,26 +175,25 @@ class CursosController extends Controller
             'semComentario' => $semComentario
         ]);
     }
-    public function user(){
+    public function user()
+    {
         return $this->belongsTo('App\Models\User');
     }
 
 
-    public function aulas() {
+    public function aulas()
+    {
 
         $user = auth()->user();
         $aulas = $user->aulas;
-        return view('professor.aulas',['aulas' => $aulas]);
+        return view('professor.aulas', ['aulas' => $aulas]);
     }
 
-    public function destroy($id) {
+    public function destroy($id)
+    {
 
         Aula::findOrFail($id)->delete();
 
-        return redirect('/professor/aulas')->with('msg','Aula Excluída com Sucesso!');
+        return redirect('/professor/aulas')->with('msg', 'Aula Excluída com Sucesso!');
     }
 }
-
-
-
-
