@@ -6,7 +6,7 @@
     <div class="welcome-container">
 
 
-        <h1> Bem-vindo, Professor!</h1>
+        <h1> Bem-vindo, professor!</h1>
 
         <div class="course-cards-container">
             <div class="course-card">

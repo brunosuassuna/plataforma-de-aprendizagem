@@ -17,7 +17,7 @@
                             <th>Curso</th>
                             <th>Conteúdo</th>
                             <th>Aula</th>
-                            <th class="caixa">Ações</th>
+                            <th class="caixa">Deletar</th>
                         </tr>
                     </thead>
                     <tbody>

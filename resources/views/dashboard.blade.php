@@ -16,19 +16,19 @@
     </p>
 
     @if (auth()->user()->professor === 1)
-        <h2 class="ml-3 text-xl font-semibold text-gray-900"> Bem-Vindo, Professor {{ auth()->user()->name }}!</h2>
+        <h2 class="ml-3 text-xl font-semibold text-gray-900"> Bem-Vindo, professor {{ auth()->user()->name }}!</h2>
         <div class="bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 p-6 lg:p-8">
             <a class="flex items-center" href="/professor/areaprofessor">
                 <img width="50px" src="/img/coaching.png" alt="Área do Professor">
 
-                <strong>Acesse a Área do Professor</strong>
+                <strong>Acesse a área do professor</strong>
 
             </a>
         </div>
 
-        
+
     @else
-        <h2 class="ml-3 text-xl font-semibold text-gray-900"> Bem-Vindo, Aluno {{ auth()->user()->name }}!</h2>
+        <h2 class="ml-3 text-xl font-semibold text-gray-900"> Bem-Vindo, aluno {{ auth()->user()->name }}!</h2>
 
         <div class="bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 p-6 lg:p-8">
             <a class="flex items-center" href="/">

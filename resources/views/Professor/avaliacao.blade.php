@@ -9,7 +9,7 @@
     </head>
 
     <body>
-            <h1>Página De Avaliação Do Professor</h1>
+            <h1>Página de Avaliação do Professor</h1>
             <div class="avaliacoes-container">
             <section class="avaliacoes">
                 <h2>Avaliações Criadas</h2>
