@@ -11,7 +11,7 @@ Nossa plataforma oferece recursos avançados para aprendizagem online, incluindo
 
 Antes de começar, certifique-se de ter os seguintes requisitos instalados:
 
-- PHP 7.4 ou superior
+- PHP 8.0 ou superior
 - Composer
 - MySQL
 
@@ -23,5 +23,7 @@ Antes de começar, certifique-se de ter os seguintes requisitos instalados:
 4. Configure o arquivo `.env` com suas configurações locais.
 5. Gere a chave de aplicação: `php artisan key:generate`
 6. Execute as migrações: `php artisan migrate`
-7. Inicie o servidor local: `php artisan serve`
+7. Instalar o nodejs: `npm install`
+8. Iniciar as depedências do nodejs: `npm run dev`
+9. Inicie o servidor local: `php artisan serve`
 
