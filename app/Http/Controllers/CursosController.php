@@ -19,7 +19,8 @@ class CursosController extends Controller
     }
     public function dashboard()
     {
-        return view('dashboard');
+        $avaliacaos = Avaliacao::all();
+        return view('dashboard', ['avaliacaos' => $avaliacaos]);
     }
 
     public function nossoscursos()
