@@ -38,7 +38,31 @@
 
             </a>
         </div>
-
+            <section class="avaliacoes">
+                <h2>Próximas Avaliações</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Curso</th>
+                            <th>Título</th>
+                            <th>Tipo</th>
+                            <th>Data</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($avaliacaos as $avaliacao)
+                            <tr>
+                                <td>{{ $avaliacao->curso }}</td>
+                                <td>{{ $avaliacao->titulo }}</td>
+                                <td>{{ $avaliacao->tipo }}</td>
+                                <td>{{ $avaliacao->data }}</td>
+                                <td>{{ $avaliacao->status }}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </section>
 
     @endif
 
