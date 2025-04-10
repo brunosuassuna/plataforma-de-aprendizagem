@@ -1,30 +1,33 @@
-# Plataforma de Aprendizagem Online 
+# 📚 Brothers Learning
+Brothers Learning é uma plataforma robusta de educação online, desenvolvida com foco em escalabilidade, segurança e experiência do usuário. O projeto foi construído utilizando PHP, o framework Laravel e MySQL como banco de dados relacional.
 
-Bem-vindo à nossa Plataforma de Aprendizagem Online, a Brothers Learning! 
-Este projeto foi desenvolvido utilizando PHP, Laravel e MySQL.
+A aplicação permite que instituições, professores e alunos se conectem em um ambiente virtual completo, promovendo o ensino de forma dinâmica e acessível.
 
-## Visão Geral
+## ⚙️ Tecnologias Utilizadas
+- **PHP** — linguagem principal para o backend
 
-Nossa plataforma oferece recursos avançados para aprendizagem online, incluindo a criação e gestão de cursos, aulas em vídeo, avaliações, interação entre alunos e professores.
+- **Laravel** — framework PHP moderno e elegante
 
-## Pré-requisitos
+- **MySQL** — banco de dados relacional
 
-Antes de começar, certifique-se de ter os seguintes requisitos instalados:
+- **Blade** — motor de templates do Laravel
 
-- PHP 8.0 ou superior
-- Composer
-- MySQL
+- **HTML5/CSS3/JavaScript** — para construção do frontend
 
-## Instalação
+- **Bootstrap** — design responsivo e mobile-first (se estiver usando)
 
-1. Clone o repositório: ` git clone https://github.com/brunosuassuna/plataforma-de-aprendizagem.git`
-2. Instale as dependências: `composer install`
-3. Copie o arquivo de ambiente: `cp .env.example .env`
-4. Configure o arquivo `.env` com suas configurações locais (DB_DATABASE e DB_PORT).
-5. Gere a chave de aplicação: `php artisan key:generate`
-6. Execute as migrações: `php artisan migrate`
-7. Instalar o nodejs: `npm install`
-`Caso não consiga executar o comando npm install, instalar o node js direto do link https://nodejs.org/en e executar novamente o npm.install`
-9. Iniciar as depedências do nodejs: `npm run dev`
-10. Inicie o servidor local: `php artisan serve`
+## 🎯 Funcionalidades Principais
+- 🧑‍🏫 Criação e gerenciamento de cursos e módulos
+
+- 🎥 Aulas em vídeo integradas e organizadas por tópicos
+
+- 💬 Área de interação entre alunos e professores
+
+- 👥 Controle de usuários com diferentes permissões (admin, professor, aluno)
+
+## 🚀 Objetivo do Projeto
+Fornecer uma solução completa para ambientes de ensino a distância, com recursos que possibilitem desde a criação de conteúdos até o acompanhamento do desempenho dos alunos, utilizando uma arquitetura limpa e escalável.
+
+## 📌 Status do Projeto
+Em evolução — novas funcionalidades estão sendo implementadas, como integração com sistemas de pagamento, certificação automática e fóruns de discussão.
 
